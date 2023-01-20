@@ -1,6 +1,6 @@
 #********************************************************
-#Program: Chromedriver
-#Description: This scrypt is resposible to call Chromedriver, check and download latest version of chromedriver, and return a headless chromedriver
+#Program:       Chromedriver
+#Description:   This scrypt is resposible to call Chromedriver, check and download latest version of chromedriver, and return a headless chromedriver
 #********************************************************
 
 #Libraries

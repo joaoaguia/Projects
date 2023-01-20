@@ -1,9 +1,10 @@
 #********************************************************
-#Program: Email_Sender
-#Description: This scrypt is resposible to send e-mails using a Gmail as a sender email, in order to run the scrypt, we need to provide the following parameters:
-# to, bcc, subject, text, attachment, sender_data - location of the txt file ('C:/xxxxxx/xxxx/xxxxxx.txt') that have the gmail account and password, the txt need to be configured as the following example:
-#    sender_email = 'xxxxxx@gmail.com'
-#    password = 'xxxxxxxxxxxxxxxx'
+#Program:       Email_Sender
+#Description:   This scrypt is resposible to send e-mails using a Gmail as a sender email, in order to run the scrypt, we need to provide the following parameters:
+#               to, bcc, subject, text, attachment, sender_data - location of the txt file ('C:/xxxxxx/xxxx/xxxxxx.txt') that have the gmail account and password, 
+#               the txt need to be configured as the following example:
+#               sender_email = 'xxxxxx@gmail.com'
+#               password = 'xxxxxxxxxxxxxxxx'
 #********************************************************
 
 #Libraries
@@ -16,6 +17,7 @@ from pathlib import Path
 import os
 
 def send_email(to, bcc, subject, text, attachment, sender_data):
+    log = ''
     #Open txt where the sender email and password is stored
     expected_vars = {'sender_email':None, 'password':None}
     with open(sender_data, 'r') as file:  
@@ -47,8 +49,8 @@ def send_email(to, bcc, subject, text, attachment, sender_data):
         # Add attachment to message and convert message to string
         message.attach(part)
     else:
-        print(f"{attachment} not found.")
-        return
+        log = (f"{filename} not found.")
+        return log
 
     text = message.as_string()
 
@@ -57,8 +59,9 @@ def send_email(to, bcc, subject, text, attachment, sender_data):
         server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
         server.login(expected_vars['sender_email'], expected_vars['password'])
         server.sendmail(expected_vars['sender_email'], [to, bcc], text)
-        print(f'Email sent to {to}')
+        log = (f'Email sent to {to}')
     except smtplib.SMTPException as e:
-        print(f'An error occurred: {e}')
+        log = (f'An error occurred: {e}')
     finally:
         server.quit()
+        return log
