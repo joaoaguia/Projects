@@ -7,9 +7,13 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
 
+from datetime import date
+import pandas as pd
+import os
+
 
 # Path to personal functions
-sys.path.append('D:/Particulares/Joao/Estudos/Programacao/GIT/Projects/Python/Functions')
+sys.path.append('C:\Users\Kaminski\Desktop\Joao\GIT\Projects\Python\Functions')
 #import Email_Sender
 import Chromedriver
 import Logs
@@ -26,52 +30,64 @@ logger.info("Starting the main program.")
 
 logger.info("Starting Chromedriver.")
 driver = Chromedriver.get_chromedriver_undetected()
+driver.save_screenshot('selenium-datadome.png')
 
 # Use the webdriver to request the page
 driver.get(website)
 
 # Wait for the page to load
-time.sleep(5)
+time.sleep(10)
 driver.implicitly_wait(10)
+
+try:
+        agree = driver.find_element(By.XPATH, f'//*[@id="didomi-notice-agree-button"]/span')
+        agree.click()
+except NoSuchElementException:
+        print('No Agree Button Presented')
 
 # Get the page source
 html = driver.page_source
 
 table = {'Destrito': [], 'Nº Imoveis': [], 'Link': []}
 
+# Name of the Excel file
+file_name = ('Extraction_' + date.today().strftime("%d_%m_%y") + '.xlsx')
+# Create the excel files directory if it does not exist
+directory = ("C:/Users/Kaminski/Desktop/Joao/GIT/Projects/Python/Bots/Web Scraping/Bank_Selling_Houses")
 
-main = driver.find_element(By.TAG_NAME, "ul")
-print(main)
+li_elements = driver.execute_script("return document.querySelectorAll('nav#search-bylocation ul.citiesList.locations.clearfix li');")
 
+print(li_elements)
+count = len(li_elements)
+print (count)
 
-
-
-
-'''
 var = 0
-
-while var < 29:
+for li in li_elements:
         var = var + 1
         variable = str(var)
         print(var)
         try:
-                table['Nº Imoveis'].append(driver.find_element(By.XPATH, f'/html/body/div[2]/div/div/div/nav[2]/ul/li[{variable}]/div').text)
-                table['Destrito'].append(driver.find_element(By.XPATH, f'/html/body/div[2]/div/div/div/nav[2]/ul/li[{variable}]/a').text)
-                table['Link'].append(driver.find_element(By.XPATH, f'/html/body/div[2]/div/div/div/nav[2]/ul/li[{variable}]/a').get_attribute("href"))
-
+                table['Nº Imoveis'].append(driver.find_element(By.XPATH, f'//*[@id="search-bylocation"]/ul/li[{variable}]/div').text)
+                table['Destrito'].append(driver.find_element(By.XPATH, f'//*[@id="search-bylocation"]/ul/li[{variable}]/a').text)
+                #Link = driver.find_element(By.XPATH, f'//*[@id="search-bylocation"]/ul/li[{variable}]/a').get_attribute("href")
+                #table['Link'].append(Link)
+                element = driver.find_element(By.XPATH, f'//*[@id="search-bylocation"]/ul/li[{variable}]/a')
+                link = element.get_attribute("href")
+                table['Link'].append(link)
+                element.click()
+                time.sleep(1)
+                driver.back()
+                time.sleep(1)
+                
         except NoSuchElementException:
-                table['Nº Imoveis'].append(driver.find_element(By.XPATH, f'/html/body/div[2]/div/div/div/nav[2]/ul/li[{variable}]/span').text)
-                table['Destrito'].append(driver.find_element(By.XPATH, f'/html/body/div[2]/div/div/div/nav[2]/ul/li[{variable}]/text()'))
+                table['Nº Imoveis'].append(driver.find_element(By.XPATH, f'//*[@id="search-bylocation"]/ul/li[{variable}]/span').text)
+                Destrito = driver.find_element(By.XPATH, f'//*[@id="search-bylocation"]/ul/li[{variable}]').text
+                Destrito = Destrito.replace('0\n','')
+                table['Destrito'].append(Destrito)
+                table['Link'].append('')
 
-print (table)
-#/html/body/div[2]/div/div/div/nav[2]/ul/li[7]/text()
-/html/body/div[2]/div/div/div/nav[2]/ul/li[7]/text()
-#/html/body/div[2]/div/div/div/nav[2]/ul/li[7]/text()
-#/html/body/div[2]/div/div/div/nav[2]/ul/li[7]/text()
-#/html/body/div[2]/div/div/div/nav[2]/ul/li[20]/text()
-#/html/body/div[2]/div/div/div/nav[2]/ul/li[7]/span
-
-            
-'''
+tabela_completa = pd.DataFrame(table)
+tabela_completa.to_excel(os.path.join(directory, file_name))
 
 
+print(table)
