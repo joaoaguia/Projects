@@ -1,7 +1,7 @@
 # Libraries
-import sys
+import sys sys.dont_write_bytecode = True
 import os
-from datetime import date
+from datetime import date, timedelta
 import pandas as pd
 # Path to personal functions
 sys.path.append('D:/Particulares/Joao/Estudos/Programacao/GIT/Projects/Python/Functions')
@@ -17,7 +17,8 @@ website = "https://www.bep.gov.pt/pages/oferta/Oferta_Pesquisa_basica.aspx"
 # Table with the structure we want on our excel file
 table = {'Código': [], 'Tipo Oferta': [], 'Vínculo': [], 'Carreira': [], 'Categoria': [], 'Distrito': [],
          'Organismo': [], 'Habilitações Literárias': [], 'Descrição da Habilitação Literária': [], 'Data Limite': [],
-         'Remuneração': [], 'Suplemento Mensal': [], 'Requisitos de Nacionalidade': []}
+         'Remuneração': [], 'Suplemento Mensal': [], 'Requisitos de Nacionalidade': [], 'Link': []}
+table_email = {'Link': []}
 # Name of the Excel file
 file_name = ('Extraction_' + date.today().strftime("%d_%m_%y") + '.xlsx')
 # Create the excel files directory if it does not exist
@@ -39,7 +40,7 @@ logger.info("Starting Chromedriver.")
 driver = Chromedriver.get_chromedriver()
 
 logger.info("Initializing Web_Scrapper.")
-rn_counter=(Web_Scrapper.scrap_data(driver, website, table))
+rn_counter, ative_last_7days = (Web_Scrapper.scrap_data(driver, website, table, table_email))
 
 logger.info("Saving Excel file.")
 tabela_completa = pd.DataFrame(table)
@@ -49,12 +50,15 @@ logger.info("Initializing Email_Sender the main program.")
 # Email message
 email_text = ('''Boa tarde,
 
-    Segue em anexo os concursos públicos abertos para o dia''' + date.today().strftime(" %d-%m-%y") + '''
+Segue em anexo os concursos públicos abertos para o dia''' + date.today().strftime(" %d-%m-%y") + '''
 
-    Existem ''' + str(rn_counter) +''' vagas que não requerem nacionalidade Portuguesa.
+Existem ''' + str(rn_counter) +''' vagas que não requerem nacionalidade Portuguesa, ''' + str(ative_last_7days) +''' que vão expirar a ''' + (date.today() + timedelta(days=7)).strftime(" %d-%m-%y") +'''
 
-    Obrigado
-    O melhor BOT do Mundo''')
+Os links para os anúncios são:
+''' + "\n".join(table_email['Link']) + '''
+
+Obrigado
+O melhor BOT do Mundo''')
 
 logger.info(Email_Sender.send_email(email_to, email_bcc, email_subject, email_text, email_attachment, email_data))
 logger.info("Finishing the main program.")
