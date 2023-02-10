@@ -50,14 +50,12 @@ def scrap_data(driver, website, table, table_email):
         while driver.find_element_by_xpath('//img[@alt="Próximo"]').get_attribute('alt') == 'Próximo':
             counter = counter + 1
             print("Page", counter)
-            #extr_data()
             ative_last_7days = extr_data() + ative_last_7days
             driver.find_element_by_xpath('//img[@alt="Próximo"]').click()
 
     except NoSuchElementException:
             counter = counter + 1
             print("Page", counter)
-            #extr_data()
             ative_last_7days = extr_data() + ative_last_7days
             return (ative_last_7days)
  
