@@ -1,0 +1,20 @@
+PROJETO PYTHON #1
+	ORGANIZADOR DE FOTOS
+		Programa que vai a uma diretoria verifica a data e cria em outra diretoria uma pasta com o Year, Month e Day.
+		Ao ir inserir um novo ficheiro na pasta já criada, verifica se o hash bate com o do ficheiro a ser copiado, se bater, cria uma pasta com o nome duplicado em
+		insere lá dentro o ficheiro.
+		E regista um log com o nome do ficheiro e a diretoria inserida, esse log vai ficar presente na diretoria de destino.
+		
+1º - DONE 		- Ver a data de um ficheiro e criar uma pasta ano, mês e dia e inserir uma copia do ficheiro la dentro.
+2º - DONE		- Copiar varios ficheiros correndo o processo para cada um deles
+3º - DONE		- Criar o Hash e guardar em uma matrix
+3º - DONE		- Tratamento, verificar se é duplicado, copiar para uma pasta duplicados e criação de logs.
+4º - Working	- Verificar se na pasta de destino já existe o ficheiro(hash) e verificação de nome
+
+
+
+
+joao_aguia@outlook.com
+
+Vizinha Mae - Senhora Lisa
+249760350 - 933641561

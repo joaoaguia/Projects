@@ -1,0 +1,16 @@
+Organizador Ficheiro
+
+DONE				- Mover todos os ficheiros da pasta origem para a pasta destino, mesmo ficheiros dentro de outras pastas									
+DONE 				- Criar processo inverso para testes e possiverl reverter da aplicação.
+DONE				- Criar pasta ano, mes e dia da criação do ficheiro verificar se já existe e mover o ficheiro para dentro da mesma.
+CANCELLED			- Criar classe para cada objeto a ser verificado.
+DONE				- Criação em uma lista e usar o hash para verificação se o ficheiro já existe
+DONE				- Inserir nome, hash, tamanho, data
+DONE				- Criação de pasta duplicados e txt com dados da tabela criada.
+falta um if para verificar se o ficheiro existe				- apagar ficheiro txt de duplicados quando revertemos a movimentação
+					- na inversao do processo falta preparar para quando o nome dos ficheiros for igual.
+					- apagar pastas da origem
+DONE				- criar ficheiro com codigos hash no destino, para no caso de ser necessario acrescentar mais fotos
+			URGENT	- no caso de erro de nome repetido, se iniciar o programa de novo ele move o ficheiro para duplicados
+					
+8187
