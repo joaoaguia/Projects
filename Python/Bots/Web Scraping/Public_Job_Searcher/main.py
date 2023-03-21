@@ -1,5 +1,5 @@
 # Libraries
-import sys sys.dont_write_bytecode = True
+import sys 
 import os
 from datetime import date, timedelta
 import pandas as pd

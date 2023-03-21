@@ -26,7 +26,7 @@ if not os.path.exists(directory):
     os.makedirs(directory)
 # Email Info except email text, needs to be filled after 'Web_Scrapper.scrap_data'
 email_to = "joaopedroaguiadasilva@gmail.com"
-email_bcc = "kama.florencio@gmail.com"
+email_bcc = "miguel.aguia@gmail.com"
 email_subject = ("Leilão Finanças - Casas" + date.today().strftime(" %d-%m-%y"))
 email_attachment = os.path.join(directory, file_name)
 email_data = 'D:/Particulares/Joao/Estudos/Programacao/GIT/Email_data.txt'
