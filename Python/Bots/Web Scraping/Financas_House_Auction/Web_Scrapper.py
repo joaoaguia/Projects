@@ -23,35 +23,35 @@ def scrap_data(driver, website, table, table_email):
                 var += 1
                 variable = str(var)
                 try:
-                        table['Nº Venda'].append(driver.find_element_by_xpath(f'/html/body/table[2]/tbody/tr/td[2]/table/tbody/tr[{variable}]/td/div/table/tbody/tr[2]/td[1]/span[2]').text)
+                        table['Nº Venda'].append(driver.find_element("xpath",f'/html/body/table[2]/tbody/tr/td[2]/table/tbody/tr[{variable}]/td/div/table/tbody/tr[2]/td[1]/span[2]').text)
                         try:
-                                table['Preço Base de Venda'].append(float(driver.find_element_by_xpath(f'/html/body/table[2]/tbody/tr/td[2]/table/tbody/tr[{variable}]/td/div/table/tbody/tr[2]/td[1]/span[4]').text.replace('.','').replace('€','').replace(',','.')))
+                                table['Preço Base de Venda'].append(float(driver.find_element("xpath",f'/html/body/table[2]/tbody/tr/td[2]/table/tbody/tr[{variable}]/td/div/table/tbody/tr[2]/td[1]/span[4]').text.replace('.','').replace('€','').replace(',','.')))
                         except ValueError:
-                                table['Preço Base de Venda'].append(driver.find_element_by_xpath(f'/html/body/table[2]/tbody/tr/td[2]/table/tbody/tr[{variable}]/td/div/table/tbody/tr[2]/td[1]/span[4]').text)
+                                table['Preço Base de Venda'].append(driver.find_element("xpath",f'/html/body/table[2]/tbody/tr/td[2]/table/tbody/tr[{variable}]/td/div/table/tbody/tr[2]/td[1]/span[4]').text)
 
-                        date_string = driver.find_element_by_xpath(f'/html/body/table[2]/tbody/tr/td[2]/table/tbody/tr[{variable}]/td/div/table/tbody/tr[2]/td[1]/span[6]').text
+                        date_string = driver.find_element("xpath",f'/html/body/table[2]/tbody/tr/td[2]/table/tbody/tr[{variable}]/td/div/table/tbody/tr[2]/td[1]/span[6]').text
                         table['Data Limite para Propostas'].append(date_string)
-                        table['Serviço de Finanças'].append(driver.find_element_by_xpath(f'/html/body/table[2]/tbody/tr/td[2]/table/tbody/tr[{variable}]/td/div/table/tbody/tr[2]/td[1]/span[8]').text)
+                        table['Serviço de Finanças'].append(driver.find_element("xpath",f'/html/body/table[2]/tbody/tr/td[2]/table/tbody/tr[{variable}]/td/div/table/tbody/tr[2]/td[1]/span[8]').text)
 
-                        status = driver.find_element_by_xpath(f'/html/body/table[2]/tbody/tr/td[2]/table/tbody/tr[{variable}]/td/div/table/tbody/tr[2]/td[1]/span[10]').text
+                        status = driver.find_element("xpath",f'/html/body/table[2]/tbody/tr/td[2]/table/tbody/tr[{variable}]/td/div/table/tbody/tr[2]/td[1]/span[10]').text
                         table['Estado Actual'].append(status)
-                        table['Modalidade'].append(driver.find_element_by_xpath(f'/html/body/table[2]/tbody/tr/td[2]/table/tbody/tr[{variable}]/td/div/table/tbody/tr[2]/td[1]/span[12]').text)
-                        table['Link'].append(driver.find_element_by_xpath(f'/html/body/table[2]/tbody/tr/td[2]/table/tbody/tr[{variable}]/td/div/table/tbody/tr[1]/td[3]/table/tbody/tr/th[1]/a').get_attribute('href'))
+                        table['Modalidade'].append(driver.find_element("xpath",f'/html/body/table[2]/tbody/tr/td[2]/table/tbody/tr[{variable}]/td/div/table/tbody/tr[2]/td[1]/span[12]').text)
+                        table['Link'].append(driver.find_element("xpath",f'/html/body/table[2]/tbody/tr/td[2]/table/tbody/tr[{variable}]/td/div/table/tbody/tr[1]/td[3]/table/tbody/tr/th[1]/a').get_attribute('href'))
                         
                         if status == 'Em Curso' and datetime.strptime(date_string, '%Y-%m-%d às %H:%M') < today + timedelta(days=7):
                                 ative_last_7days += 1
-                                table_email['Link'].append(driver.find_element_by_xpath(f'/html/body/table[2]/tbody/tr/td[2]/table/tbody/tr[{variable}]/td/div/table/tbody/tr[1]/td[3]/table/tbody/tr/th[1]/a').get_attribute('href'))
+                                table_email['Link'].append(driver.find_element("xpath",f'/html/body/table[2]/tbody/tr/td[2]/table/tbody/tr[{variable}]/td/div/table/tbody/tr[1]/td[3]/table/tbody/tr/th[1]/a').get_attribute('href'))
                 except NoSuchElementException:
                         break
 
         return ative_last_7days
 
-    try:
-        while driver.find_element_by_xpath('//img[@alt="Próximo"]').get_attribute('alt') == 'Próximo':
+    try:        
+        while driver.find_element("xpath",'//img[@alt="Próximo"]').get_attribute('alt') == 'Próximo':
             counter = counter + 1
             print("Page", counter)
             ative_last_7days = extr_data() + ative_last_7days
-            driver.find_element_by_xpath('//img[@alt="Próximo"]').click()
+            driver.find_element("xpath",'//img[@alt="Próximo"]').click()
 
     except NoSuchElementException:
             counter = counter + 1

@@ -15,7 +15,7 @@ from datetime import datetime, timedelta
 
 def setup_logger(project_name=None):
     # Define the log directory
-    log_dir = "C:\\Users\\joao_\\Documents\\Python_Project_Files\\Logs"
+    log_dir = (os.path.expanduser("~/Documents/Python_Project_Files/Logs"))
 
     # If a project name is not provided, use the current script name
     if project_name is None:
