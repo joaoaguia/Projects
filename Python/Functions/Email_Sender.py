@@ -28,7 +28,6 @@ def send_email(to, bcc, subject, text, attachment, sender_data):
     message["From"] = expected_vars['sender_email']
     message["To"] = to
     message["Subject"] = subject
-    message["Bcc"] = bcc  # Recommended for mass emails
     # Add body to email
     message.attach(MIMEText(text, "plain"))
 
@@ -53,13 +52,13 @@ def send_email(to, bcc, subject, text, attachment, sender_data):
         return log
 
     text = message.as_string()
-
     try:
         # Log in to server using secure context and send email
         server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
         server.login(expected_vars['sender_email'], expected_vars['password'])
-        server.sendmail(expected_vars['sender_email'], [to, bcc], text)
-        log = (f'Email sent to {to}')
+        
+        server.sendmail(expected_vars['sender_email'], [to] + bcc.split(','), text)
+        log = (f'Email sent to {to} and BCC {bcc}')
     except smtplib.SMTPException as e:
         log = (f'An error occurred: {e}')
     finally:

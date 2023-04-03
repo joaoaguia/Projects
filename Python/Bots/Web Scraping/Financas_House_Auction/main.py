@@ -3,6 +3,8 @@ import sys
 import os
 from datetime import date, timedelta
 import pandas as pd
+import configparser
+
 # Path to personal functions
 sys.path.append('D:/Particulares/Joao/Estudos/Programacao/GIT/Projects/Python/Functions')
 import Email_Sender
@@ -10,26 +12,42 @@ import Chromedriver
 import Logs
 import Web_Scrapper
 
+# Path to data of the email sender
+email_data = 'C:/Users/joao_/Documents/Python_Project_Files/Email/Email_data.txt'
+# Path to email receivers list
+email_receiver = 'C:/Users/joao_/Documents/Python_Project_Files/Email/Receivers/Financas_House_Auction/Financas_House_Auction_Receivers.txt'
+# Path to Excel file to be stored
+excel_path = "C:/Users/joao_/Documents/Python_Project_Files/Excel_Files"
+
+
 # Name of the project will be used to fed the creation of the excel_files and logs folder
 project_name = 'Financas_House_Auction'
+
 # Website used on the 'Web_Scrapper.scrap_data' that we're gonna web scrap
 website = "https://vendas.portaldasfinancas.gov.pt/bens/consultaVendasCurso.action?tipoBem=02&tipoConsulta=*&modalidade=04&distrito=&concelho=&minimo=++.+++.+++.+++%2C++&maximo=++.+++.+++.+++%2C++&dataMin=&dataMax="
+
 # Table with the structure we want on our excel file
 table = {'Nº Venda': [], 'Preço Base de Venda': [], 'Data Limite para Propostas': [], 'Serviço de Finanças': [], 'Estado Actual': [], 'Modalidade': [], 'Link': []}
+
 # Table that will go on the Email
 table_email = {'Link': []}
+
 # Name of the Excel file
 file_name = ('Extraction_' + date.today().strftime("%d_%m_%y") + '.xlsx')
+
 # Create the excel files directory if it does not exist
-directory = os.path.join("D:/Particulares/Joao/Estudos/Programacao/GIT/Excel_Files", project_name)
+directory = os.path.join(excel_path, project_name)
 if not os.path.exists(directory):
     os.makedirs(directory)
+
 # Email Info except email text, needs to be filled after 'Web_Scrapper.scrap_data'
-email_to = "joaopedroaguiadasilva@gmail.com"
-email_bcc = "miguel.aguia@gmail.com"
+config = configparser.ConfigParser()
+config.read(email_receiver)
+email_to = config['Email']['to']
+email_bcc = config['Email']['bcc']
+
 email_subject = ("Leilão Finanças - Casas" + date.today().strftime(" %d-%m-%y"))
 email_attachment = os.path.join(directory, file_name)
-email_data = 'D:/Particulares/Joao/Estudos/Programacao/GIT/Email_data.txt'
 
 #Logger Initializer
 logger = Logs.setup_logger(project_name)
@@ -46,6 +64,7 @@ tabela_completa = pd.DataFrame(table)
 tabela_completa.to_excel(os.path.join(directory, file_name))
 
 logger.info("Initializing Email_Sender the main program.")
+
 # Email message
 email_text = ('''Boa tarde,
 
