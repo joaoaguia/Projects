@@ -6,7 +6,7 @@ import pandas as pd
 import configparser
 
 # Path to personal functions
-sys.path.append('D:/Particulares/Joao/Estudos/Programacao/GIT/Projects/Python/Functions')
+sys.path.append((os.path.expanduser("~/Documents/Python_Project_Files/GIT/Functions")))
 import Email_Sender
 import Chromedriver
 import Logs
