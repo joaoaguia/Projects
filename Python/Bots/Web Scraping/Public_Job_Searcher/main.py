@@ -13,11 +13,11 @@ import Logs
 import Web_Scrapper
 
 # Path to data of the email sender
-email_data = 'C:/Users/joao_/Documents/Python_Project_Files/Email/Email_data.txt'
+email_data = (os.path.expanduser("~/Documents/Python_Project_Files/Email/Email_data.txt"))
 # Path to email receivers list
-email_receiver = 'C:/Users/joao_/Documents/Python_Project_Files/Email/Receivers/Public_Job_Searcher/Public_Job_Searcher_Receivers.txt'
+email_receiver = (os.path.expanduser("~/Documents/Python_Project_Files/Email/Receivers/Public_Job_Searcher/Public_Job_Searcher_Receivers.txt"))
 # Path to Excel file to be stored
-excel_path = "C:/Users/joao_/Documents/Python_Project_Files/Excel_Files"
+excel_path = (os.path.expanduser("~/Documents/Python_Project_Files/Excel_Files"))
 
 
 # Name of the project will be used to fed the creation of the excel_files and logs folder
