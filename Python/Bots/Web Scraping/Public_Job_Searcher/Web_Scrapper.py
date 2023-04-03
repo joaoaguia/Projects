@@ -39,17 +39,17 @@ def scrap_data(driver, website, table, table_email):
             var = var + 1
             variable = str(var)
             # Extract the link element and add the text to the table
-            link = driver.find_element(by=By.LINK_TEXT, value=(driver.find_element_by_xpath(f'/html/body/form[1]/div[3]/div[2]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/table/tbody/tr[{variable}]/td[1]').text))
+            link = driver.find_element(by=By.LINK_TEXT, value=(driver.find_element("xpath",f'/html/body/form[1]/div[3]/div[2]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/table/tbody/tr[{variable}]/td[1]').text))
             table['Código'].append(link.text)
             # Extract the text from the other cells and add it to the table
-            table['Tipo Oferta'].append(driver.find_element_by_xpath(f'/html/body/form[1]/div[3]/div[2]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/table/tbody/tr[{variable}]/td[2]').text)
-            table['Vínculo'].append(driver.find_element_by_xpath(f'/html/body/form[1]/div[3]/div[2]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/table/tbody/tr[{variable}]/td[3]').text)
-            table['Carreira'].append(driver.find_element_by_xpath(f'/html/body/form[1]/div[3]/div[2]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/table/tbody/tr[{variable}]/td[4]').text)
-            table['Categoria'].append(driver.find_element_by_xpath(f'/html/body/form[1]/div[3]/div[2]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/table/tbody/tr[{variable}]/td[5]').text)
-            table['Distrito'].append(driver.find_element_by_xpath(f'/html/body/form[1]/div[3]/div[2]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/table/tbody/tr[{variable}]/td[6]').text)
-            table['Organismo'].append(driver.find_element_by_xpath(f'/html/body/form[1]/div[3]/div[2]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/table/tbody/tr[{variable}]/td[7]').text)
-            table['Habilitações Literárias'].append(driver.find_element_by_xpath(f'/html/body/form[1]/div[3]/div[2]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/table/tbody/tr[{variable}]/td[8]').text)
-            date_string = driver.find_element_by_xpath(f'/html/body/form[1]/div[3]/div[2]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/table/tbody/tr[{variable}]/td[9]').text
+            table['Tipo Oferta'].append(driver.find_element("xpath",f'/html/body/form[1]/div[3]/div[2]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/table/tbody/tr[{variable}]/td[2]').text)
+            table['Vínculo'].append(driver.find_element("xpath",f'/html/body/form[1]/div[3]/div[2]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/table/tbody/tr[{variable}]/td[3]').text)
+            table['Carreira'].append(driver.find_element("xpath",f'/html/body/form[1]/div[3]/div[2]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/table/tbody/tr[{variable}]/td[4]').text)
+            table['Categoria'].append(driver.find_element("xpath",f'/html/body/form[1]/div[3]/div[2]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/table/tbody/tr[{variable}]/td[5]').text)
+            table['Distrito'].append(driver.find_element("xpath",f'/html/body/form[1]/div[3]/div[2]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/table/tbody/tr[{variable}]/td[6]').text)
+            table['Organismo'].append(driver.find_element("xpath",f'/html/body/form[1]/div[3]/div[2]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/table/tbody/tr[{variable}]/td[7]').text)
+            table['Habilitações Literárias'].append(driver.find_element("xpath",f'/html/body/form[1]/div[3]/div[2]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/table/tbody/tr[{variable}]/td[8]').text)
+            date_string = driver.find_element("xpath",f'/html/body/form[1]/div[3]/div[2]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]/div[1]/table/tbody/tr[{variable}]/td[9]').text
             table['Data Limite'].append(date_string)
 
             #code of the offer
