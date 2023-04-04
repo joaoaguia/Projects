@@ -57,14 +57,14 @@ def scrap_data(driver, website, table, table_email):
             link.click()
 
             try:
-                rem = driver.find_element_by_id('ctl00_ctl00_FormMasterContentPlaceHolder_ContentPlaceHolder1_lblNORemuneracao').text
+                rem = driver.find_element(By.ID,'ctl00_ctl00_FormMasterContentPlaceHolder_ContentPlaceHolder1_lblNORemuneracao').text
             except NoSuchElementException:
-                rem = driver.find_element_by_id('ctl00_ctl00_FormMasterContentPlaceHolder_ContentPlaceHolder1_lblRemuneracao').text
+                rem = driver.find_element(By.ID,'ctl00_ctl00_FormMasterContentPlaceHolder_ContentPlaceHolder1_lblRemuneracao').text
             table['Remuneração'].append(rem)
             try:
-                sm = driver.find_element_by_id('ctl00_ctl00_FormMasterContentPlaceHolder_ContentPlaceHolder1_lblNOSupMensal').text
+                sm = driver.find_element(By.ID,'ctl00_ctl00_FormMasterContentPlaceHolder_ContentPlaceHolder1_lblNOSupMensal').text
             except NoSuchElementException:
-                sm = driver.find_element_by_id('ctl00_ctl00_FormMasterContentPlaceHolder_ContentPlaceHolder1_lblSuplemento').text
+                sm = driver.find_element(By.ID,'ctl00_ctl00_FormMasterContentPlaceHolder_ContentPlaceHolder1_lblSuplemento').text
             table['Suplemento Mensal'].append(sm)
             try:
                 tab = driver.find_element(by=By.LINK_TEXT, value="Requisitos de Admissão")
@@ -72,18 +72,18 @@ def scrap_data(driver, website, table, table_email):
             except NoSuchElementException:
                 pass
             try:
-                dhl = driver.find_element_by_id('ctl00_ctl00_FormMasterContentPlaceHolder_ContentPlaceHolder1_lblDesHabLit').text
+                dhl = driver.find_element(By.ID,'ctl00_ctl00_FormMasterContentPlaceHolder_ContentPlaceHolder1_lblDesHabLit').text
             except NoSuchElementException:
                 try:
-                    dhl = driver.find_element_by_id('ctl00_ctl00_FormMasterContentPlaceHolder_ContentPlaceHolder1_lblDescricaoHabilitacao').text
+                    dhl = driver.find_element(By.ID,'ctl00_ctl00_FormMasterContentPlaceHolder_ContentPlaceHolder1_lblDescricaoHabilitacao').text
                 except NoSuchElementException:
                     dhl = 'Não Indicado'
             table['Descrição da Habilitação Literária'].append(dhl)
             try:
-                rn = driver.find_element_by_id('ctl00_ctl00_FormMasterContentPlaceHolder_ContentPlaceHolder1_lblNOReqNac').text
+                rn = driver.find_element(By.ID,'ctl00_ctl00_FormMasterContentPlaceHolder_ContentPlaceHolder1_lblNOReqNac').text
             except NoSuchElementException:
                 try:
-                    rn = driver.find_element_by_id('ctl00_ctl00_FormMasterContentPlaceHolder_ContentPlaceHolder1_lblRequisitosNacionalidade').text
+                    rn = driver.find_element(By.ID,'ctl00_ctl00_FormMasterContentPlaceHolder_ContentPlaceHolder1_lblRequisitosNacionalidade').text
                 except NoSuchElementException:
                     rn = 'Não Indicado'
             table['Requisitos de Nacionalidade'].append(rn)
