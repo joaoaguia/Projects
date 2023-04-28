@@ -1,0 +1,3055 @@
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_PI_ALCOHOL_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Product Involvement % : Alcohol', 'Product Involvement % : Alcohol'
+            union
+            select @dic_id, 'FR', 'Product Involvement % : Alcohol', 'Product Involvement % : Alcohol'
+
+            insert into ref_esg_fields values ('MS_PI_ALCOHOL_PER','MORNING_STAR','Product Involvement',@dic_id,null,null,'Sustainability Fund Package - Product Involvement','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_PI_ANIMAL_TEST_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Product Involvement % : Animal Testing', 'Product Involvement % : Animal Testing'
+            union
+            select @dic_id, 'FR', 'Product Involvement % : Animal Testing', 'Product Involvement % : Animal Testing'
+
+            insert into ref_esg_fields values ('MS_PI_ANIMAL_TEST_PER','MORNING_STAR','Product Involvement',@dic_id,null,null,'Sustainability Fund Package - Product Involvement','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_PI_ABORT_CONTRA_STEM_CELL_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Product Involvement % : Abortive/Contraceptives/Stem Cell', 'Product Involvement % : Abortive/Contraceptives/Stem Cell'
+            union
+            select @dic_id, 'FR', 'Product Involvement % : Abortive/Contraceptives/Stem Cell', 'Product Involvement % : Abortive/Contraceptives/Stem Cell'
+
+            insert into ref_esg_fields values ('MS_PI_ABORT_CONTRA_STEM_CELL_PER','MORNING_STAR','Product Involvement',@dic_id,null,null,'Sustainability Fund Package - Product Involvement','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_PI_CONTR_WPN_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Product Involvement % : Controversial Weapons', 'Product Involvement % : Controversial Weapons'
+            union
+            select @dic_id, 'FR', 'Product Involvement % : Controversial Weapons', 'Product Involvement % : Controversial Weapons'
+
+            insert into ref_esg_fields values ('MS_PI_CONTR_WPN_PER','MORNING_STAR','Product Involvement',@dic_id,null,null,'Sustainability Fund Package - Product Involvement','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_PI_FUR_LEATHER_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Product Involvement % : Fur and Specialty Leather', 'Product Involvement % : Fur and Specialty Leather'
+            union
+            select @dic_id, 'FR', 'Product Involvement % : Fur and Specialty Leather', 'Product Involvement % : Fur and Specialty Leather'
+
+            insert into ref_esg_fields values ('MS_PI_FUR_LEATHER_PER','MORNING_STAR','Product Involvement',@dic_id,null,null,'Sustainability Fund Package - Product Involvement','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_PI_GAMBLING_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Product Involvement % : Gambling', 'Product Involvement % : Gambling'
+            union
+            select @dic_id, 'FR', 'Product Involvement % : Gambling', 'Product Involvement % : Gambling'
+
+            insert into ref_esg_fields values ('MS_PI_GAMBLING_PER','MORNING_STAR','Product Involvement',@dic_id,null,null,'Sustainability Fund Package - Product Involvement','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_PI_GMO_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Product Involvement % : GMO', 'Product Involvement % : GMO'
+            union
+            select @dic_id, 'FR', 'Product Involvement % : GMO', 'Product Involvement % : GMO'
+
+            insert into ref_esg_fields values ('MS_PI_GMO_PER','MORNING_STAR','Product Involvement',@dic_id,null,null,'Sustainability Fund Package - Product Involvement','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_PI_MILITARY_CONTR_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Product Involvement % : Military Contracting', 'Product Involvement % : Military Contracting'
+            union
+            select @dic_id, 'FR', 'Product Involvement % : Military Contracting', 'Product Involvement % : Military Contracting'
+
+            insert into ref_esg_fields values ('MS_PI_MILITARY_CONTR_PER','MORNING_STAR','Product Involvement',@dic_id,null,null,'Sustainability Fund Package - Product Involvement','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_PI_PESTICIDES_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Product Involvement % : Pesticides', 'Product Involvement % : Pesticides'
+            union
+            select @dic_id, 'FR', 'Product Involvement % : Pesticides', 'Product Involvement % : Pesticides'
+
+            insert into ref_esg_fields values ('MS_PI_PESTICIDES_PER','MORNING_STAR','Product Involvement',@dic_id,null,null,'Sustainability Fund Package - Product Involvement','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_PI_TOBACCO_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Product Involvement % : Tobacco', 'Product Involvement % : Tobacco'
+            union
+            select @dic_id, 'FR', 'Product Involvement % : Tobacco', 'Product Involvement % : Tobacco'
+
+            insert into ref_esg_fields values ('MS_PI_TOBACCO_PER','MORNING_STAR','Product Involvement',@dic_id,null,null,'Sustainability Fund Package - Product Involvement','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_PI_NUCLEAR_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Product Involvement % : Nuclear', 'Product Involvement % : Nuclear'
+            union
+            select @dic_id, 'FR', 'Product Involvement % : Nuclear', 'Product Involvement % : Nuclear'
+
+            insert into ref_esg_fields values ('MS_PI_NUCLEAR_PER','MORNING_STAR','Product Involvement',@dic_id,null,null,'Sustainability Fund Package - Product Involvement','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_PI_PALM_OIL_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Product Involvement % : Palm Oil', 'Product Involvement % : Palm Oil'
+            union
+            select @dic_id, 'FR', 'Product Involvement % : Palm Oil', 'Product Involvement % : Palm Oil'
+
+            insert into ref_esg_fields values ('MS_PI_PALM_OIL_PER','MORNING_STAR','Product Involvement',@dic_id,null,null,'Sustainability Fund Package - Product Involvement','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_PI_SMALL_ARMS_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Product Involvement % : Small Arms', 'Product Involvement % : Small Arms'
+            union
+            select @dic_id, 'FR', 'Product Involvement % : Small Arms', 'Product Involvement % : Small Arms'
+
+            insert into ref_esg_fields values ('MS_PI_SMALL_ARMS_PER','MORNING_STAR','Product Involvement',@dic_id,null,null,'Sustainability Fund Package - Product Involvement','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_PI_THERMAL_COAL_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Product Involvement % : Thermal Coal', 'Product Involvement % : Thermal Coal'
+            union
+            select @dic_id, 'FR', 'Product Involvement % : Thermal Coal', 'Product Involvement % : Thermal Coal'
+
+            insert into ref_esg_fields values ('MS_PI_THERMAL_COAL_PER','MORNING_STAR','Product Involvement',@dic_id,null,null,'Sustainability Fund Package - Product Involvement','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FUND_RTG_SUST_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Morningstar Sustainability Rating', 'Morningstar Sustainability Rating'
+            union
+            select @dic_id, 'FR', 'Morningstar Sustainability Rating', 'Morningstar Sustainability Rating'
+
+            insert into ref_esg_fields values ('MS_FUND_RTG_SUST_TEXT','MORNING_STAR','Sustainability Fund Package - ESG Fund Ratings ',@dic_id,null,null,'Sustainability Fund Package - ESG Fund Ratings ','varchar(5000)',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FUND_RTG_SUST_DATE') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Sustainability Rating Date', 'Sustainability Rating Date'
+            union
+            select @dic_id, 'FR', 'Sustainability Rating Date', 'Sustainability Rating Date'
+
+            insert into ref_esg_fields values ('MS_FUND_RTG_SUST_DATE','MORNING_STAR','Sustainability Fund Package - ESG Fund Ratings ',@dic_id,null,null,'Sustainability Fund Package - ESG Fund Ratings ','date',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FUND_RTG_SI_OVRL_START_DATE') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Sustainable Investment Overall Start Date', 'Sustainable Investment Overall Start Date'
+            union
+            select @dic_id, 'FR', 'Sustainable Investment Overall Start Date', 'Sustainable Investment Overall Start Date'
+
+            insert into ref_esg_fields values ('MS_FUND_RTG_SI_OVRL_START_DATE','MORNING_STAR','Sustainability Fund Package - ESG Fund Ratings ',@dic_id,null,null,'Sustainability Fund Package - ESG Fund Ratings ','date',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FUND_RTG_PORT_CORP_SUST_NUM') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Portfolio Corporate Sustainability Rating', 'Portfolio Corporate Sustainability Rating'
+            union
+            select @dic_id, 'FR', 'Portfolio Corporate Sustainability Rating', 'Portfolio Corporate Sustainability Rating'
+
+            insert into ref_esg_fields values ('MS_FUND_RTG_PORT_CORP_SUST_NUM','MORNING_STAR','Sustainability Fund Package - ESG Fund Ratings ',@dic_id,null,null,'Sustainability Fund Package - ESG Fund Ratings ','int',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FUND_RTG_PORT_SOV_SUST_NUM') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Portfolio Sovereign Sustainability Rating', 'Portfolio Sovereign Sustainability Rating'
+            union
+            select @dic_id, 'FR', 'Portfolio Sovereign Sustainability Rating', 'Portfolio Sovereign Sustainability Rating'
+
+            insert into ref_esg_fields values ('MS_FUND_RTG_PORT_SOV_SUST_NUM','MORNING_STAR','Sustainability Fund Package - ESG Fund Ratings ',@dic_id,null,null,'Sustainability Fund Package - ESG Fund Ratings ','int',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FUND_RTG_PORT_SUST_CORP_CONTR_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Portfolio Sustainability Rating - Corporate Contribution Percent', 'Portfolio Sustainability Rating - Corporate Contribution Percent'
+            union
+            select @dic_id, 'FR', 'Portfolio Sustainability Rating - Corporate Contribution Percent', 'Portfolio Sustainability Rating - Corporate Contribution Percent'
+
+            insert into ref_esg_fields values ('MS_FUND_RTG_PORT_SUST_CORP_CONTR_PER','MORNING_STAR','Sustainability Fund Package - ESG Fund Ratings ',@dic_id,null,null,'Sustainability Fund Package - ESG Fund Ratings ','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FUND_RTG_PORT_SUST_SOV_CONTR_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Portfolio Sustainability Rating - Sovereign Contribution Percent', 'Portfolio Sustainability Rating - Sovereign Contribution Percent'
+            union
+            select @dic_id, 'FR', 'Portfolio Sustainability Rating - Sovereign Contribution Percent', 'Portfolio Sustainability Rating - Sovereign Contribution Percent'
+
+            insert into ref_esg_fields values ('MS_FUND_RTG_PORT_SUST_SOV_CONTR_PER','MORNING_STAR','Sustainability Fund Package - ESG Fund Ratings ',@dic_id,null,null,'Sustainability Fund Package - ESG Fund Ratings ','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FUND_RTG_HIST_CORP_SUST_SCORE') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Historical Corporate Sustainability Score', 'Historical Corporate Sustainability Score'
+            union
+            select @dic_id, 'FR', 'Historical Corporate Sustainability Score', 'Historical Corporate Sustainability Score'
+
+            insert into ref_esg_fields values ('MS_FUND_RTG_HIST_CORP_SUST_SCORE','MORNING_STAR','Sustainability Fund Package - ESG Fund Ratings ',@dic_id,null,null,'Sustainability Fund Package - ESG Fund Ratings ','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FUND_RTG_HIST_SOV_SUST_SCORE') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Historical Sovereign Sustainability Score', 'Historical Sovereign Sustainability Score'
+            union
+            select @dic_id, 'FR', 'Historical Sovereign Sustainability Score', 'Historical Sovereign Sustainability Score'
+
+            insert into ref_esg_fields values ('MS_FUND_RTG_HIST_SOV_SUST_SCORE','MORNING_STAR','Sustainability Fund Package - ESG Fund Ratings ',@dic_id,null,null,'Sustainability Fund Package - ESG Fund Ratings ','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FUND_RTG_PORT_CORP_SUST_SCORE') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Portfolio Corporate Sustainability Score', 'Portfolio Corporate Sustainability Score'
+            union
+            select @dic_id, 'FR', 'Portfolio Corporate Sustainability Score', 'Portfolio Corporate Sustainability Score'
+
+            insert into ref_esg_fields values ('MS_FUND_RTG_PORT_CORP_SUST_SCORE','MORNING_STAR','Sustainability Fund Package - ESG Fund Ratings ',@dic_id,null,null,'Sustainability Fund Package - ESG Fund Ratings ','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FUND_RTG_PORT_SOV_SUST_SCORE') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Portfolio Sovereign Sustainability Score', 'Portfolio Sovereign Sustainability Score'
+            union
+            select @dic_id, 'FR', 'Portfolio Sovereign Sustainability Score', 'Portfolio Sovereign Sustainability Score'
+
+            insert into ref_esg_fields values ('MS_FUND_RTG_PORT_SOV_SUST_SCORE','MORNING_STAR','Sustainability Fund Package - ESG Fund Ratings ',@dic_id,null,null,'Sustainability Fund Package - ESG Fund Ratings ','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FUND_RTG_CORP_SUST_PORT_COV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Corporate Sustainability Rating - Percent of Eligible Portfolio Covered', 'Corporate Sustainability Rating - Percent of Eligible Portfolio Covered'
+            union
+            select @dic_id, 'FR', 'Corporate Sustainability Rating - Percent of Eligible Portfolio Covered', 'Corporate Sustainability Rating - Percent of Eligible Portfolio Covered'
+
+            insert into ref_esg_fields values ('MS_FUND_RTG_CORP_SUST_PORT_COV_PER','MORNING_STAR','Sustainability Fund Package - ESG Fund Ratings ',@dic_id,null,null,'Sustainability Fund Package - ESG Fund Ratings ','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FUND_RTG_SOV_SUST_PORT_COV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Sovereign Sustainability Rating - Percent of Eligible Portfolio Covered', 'Sovereign Sustainability Rating - Percent of Eligible Portfolio Covered'
+            union
+            select @dic_id, 'FR', 'Sovereign Sustainability Rating - Percent of Eligible Portfolio Covered', 'Sovereign Sustainability Rating - Percent of Eligible Portfolio Covered'
+
+            insert into ref_esg_fields values ('MS_FUND_RTG_SOV_SUST_PORT_COV_PER','MORNING_STAR','Sustainability Fund Package - ESG Fund Ratings ',@dic_id,null,null,'Sustainability Fund Package - ESG Fund Ratings ','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FUND_RTG_SUST_SECUR_SCORE_NUM') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Sustainability Rating - Number of Securities Scored', 'Sustainability Rating - Number of Securities Scored'
+            union
+            select @dic_id, 'FR', 'Sustainability Rating - Number of Securities Scored', 'Sustainability Rating - Number of Securities Scored'
+
+            insert into ref_esg_fields values ('MS_FUND_RTG_SUST_SECUR_SCORE_NUM','MORNING_STAR','Sustainability Fund Package - ESG Fund Ratings ',@dic_id,null,null,'Sustainability Fund Package - ESG Fund Ratings ','int',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FUND_RTG_AUM_NO_CONTR_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Percent of AUM with No Controversies', 'Percent of AUM with No Controversies'
+            union
+            select @dic_id, 'FR', 'Percent of AUM with No Controversies', 'Percent of AUM with No Controversies'
+
+            insert into ref_esg_fields values ('MS_FUND_RTG_AUM_NO_CONTR_PER','MORNING_STAR','Sustainability Fund Package - ESG Fund Ratings ',@dic_id,null,null,'Sustainability Fund Package - ESG Fund Ratings ','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FUND_RTG_AUM_LOW_CONTR_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Percent of AUM with Low Controversies', 'Percent of AUM with Low Controversies'
+            union
+            select @dic_id, 'FR', 'Percent of AUM with Low Controversies', 'Percent of AUM with Low Controversies'
+
+            insert into ref_esg_fields values ('MS_FUND_RTG_AUM_LOW_CONTR_PER','MORNING_STAR','Sustainability Fund Package - ESG Fund Ratings ',@dic_id,null,null,'Sustainability Fund Package - ESG Fund Ratings ','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FUND_RTG_AUM_MOD_CONTR_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Percent of AUM with Moderate Controversies', 'Percent of AUM with Moderate Controversies'
+            union
+            select @dic_id, 'FR', 'Percent of AUM with Moderate Controversies', 'Percent of AUM with Moderate Controversies'
+
+            insert into ref_esg_fields values ('MS_FUND_RTG_AUM_MOD_CONTR_PER','MORNING_STAR','Sustainability Fund Package - ESG Fund Ratings ',@dic_id,null,null,'Sustainability Fund Package - ESG Fund Ratings ','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FUND_RTG_AUM_SIGN_CONTR_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Percent of AUM with Significant Controversies', 'Percent of AUM with Significant Controversies'
+            union
+            select @dic_id, 'FR', 'Percent of AUM with Significant Controversies', 'Percent of AUM with Significant Controversies'
+
+            insert into ref_esg_fields values ('MS_FUND_RTG_AUM_SIGN_CONTR_PER','MORNING_STAR','Sustainability Fund Package - ESG Fund Ratings ',@dic_id,null,null,'Sustainability Fund Package - ESG Fund Ratings ','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FUND_RTG_AUM_HIGH_CONTR_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Percent of AUM with High Controversies', 'Percent of AUM with High Controversies'
+            union
+            select @dic_id, 'FR', 'Percent of AUM with High Controversies', 'Percent of AUM with High Controversies'
+
+            insert into ref_esg_fields values ('MS_FUND_RTG_AUM_HIGH_CONTR_PER','MORNING_STAR','Sustainability Fund Package - ESG Fund Ratings ',@dic_id,null,null,'Sustainability Fund Package - ESG Fund Ratings ','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FUND_RTG_AUM_SEV_CONTR_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Percent of AUM with Severe Controversies', 'Percent of AUM with Severe Controversies'
+            union
+            select @dic_id, 'FR', 'Percent of AUM with Severe Controversies', 'Percent of AUM with Severe Controversies'
+
+            insert into ref_esg_fields values ('MS_FUND_RTG_AUM_SEV_CONTR_PER','MORNING_STAR','Sustainability Fund Package - ESG Fund Ratings ',@dic_id,null,null,'Sustainability Fund Package - ESG Fund Ratings ','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FUND_RTG_PORT_ENV_RISK_SCORE') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Portfolio Environmental Risk Score', 'Portfolio Environmental Risk Score'
+            union
+            select @dic_id, 'FR', 'Portfolio Environmental Risk Score', 'Portfolio Environmental Risk Score'
+
+            insert into ref_esg_fields values ('MS_FUND_RTG_PORT_ENV_RISK_SCORE','MORNING_STAR','Sustainability Fund Package - ESG Fund Ratings ',@dic_id,null,null,'Sustainability Fund Package - ESG Fund Ratings ','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FUND_RTG_PORT_SOC_RISK_SCORE') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Portfolio Social Risk Score', 'Portfolio Social Risk Score'
+            union
+            select @dic_id, 'FR', 'Portfolio Social Risk Score', 'Portfolio Social Risk Score'
+
+            insert into ref_esg_fields values ('MS_FUND_RTG_PORT_SOC_RISK_SCORE','MORNING_STAR','Sustainability Fund Package - ESG Fund Ratings ',@dic_id,null,null,'Sustainability Fund Package - ESG Fund Ratings ','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FUND_RTG_PORT_GOV_RISK_SCORE') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Portfolio Governance Risk Score', 'Portfolio Governance Risk Score'
+            union
+            select @dic_id, 'FR', 'Portfolio Governance Risk Score', 'Portfolio Governance Risk Score'
+
+            insert into ref_esg_fields values ('MS_FUND_RTG_PORT_GOV_RISK_SCORE','MORNING_STAR','Sustainability Fund Package - ESG Fund Ratings ',@dic_id,null,null,'Sustainability Fund Package - ESG Fund Ratings ','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FUND_RTG_AUM_COV_CONTR_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Percent of AUM Covered - Controversy', 'Percent of AUM Covered - Controversy'
+            union
+            select @dic_id, 'FR', 'Percent of AUM Covered - Controversy', 'Percent of AUM Covered - Controversy'
+
+            insert into ref_esg_fields values ('MS_FUND_RTG_AUM_COV_CONTR_PER','MORNING_STAR','Sustainability Fund Package - ESG Fund Ratings ',@dic_id,null,null,'Sustainability Fund Package - ESG Fund Ratings ','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FUND_RTG_AUM_HIGH_SEV_CONTR_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Percent of AUM with High and Severe Controversies', 'Percent of AUM with High and Severe Controversies'
+            union
+            select @dic_id, 'FR', 'Percent of AUM with High and Severe Controversies', 'Percent of AUM with High and Severe Controversies'
+
+            insert into ref_esg_fields values ('MS_FUND_RTG_AUM_HIGH_SEV_CONTR_PER','MORNING_STAR','Sustainability Fund Package - ESG Fund Ratings ',@dic_id,null,null,'Sustainability Fund Package - ESG Fund Ratings ','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_CA_MET_LOW_CA_DES_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Low Carbon Designation', 'Low Carbon Designation'
+            union
+            select @dic_id, 'FR', 'Low Carbon Designation', 'Low Carbon Designation'
+
+            insert into ref_esg_fields values ('MS_CA_MET_LOW_CA_DES_TEXT','MORNING_STAR','Sustainability Fund Package - Carbon Metrics',@dic_id,null,null,'Sustainability Fund Package - Carbon Metrics','varchar(5000)',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_CA_MET_12_MO_AVRG_CA_RISK_SCORE') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', '12 Month Average Carbon Risk Score', '12 Month Average Carbon Risk Score'
+            union
+            select @dic_id, 'FR', '12 Month Average Carbon Risk Score', '12 Month Average Carbon Risk Score'
+
+            insert into ref_esg_fields values ('MS_CA_MET_12_MO_AVRG_CA_RISK_SCORE','MORNING_STAR','Sustainability Fund Package - Carbon Metrics',@dic_id,null,null,'Sustainability Fund Package - Carbon Metrics','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_CA_MET_CA_RISK_SCORE') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Carbon Risk Score', 'Carbon Risk Score'
+            union
+            select @dic_id, 'FR', 'Carbon Risk Score', 'Carbon Risk Score'
+
+            insert into ref_esg_fields values ('MS_CA_MET_CA_RISK_SCORE','MORNING_STAR','Sustainability Fund Package - Carbon Metrics',@dic_id,null,null,'Sustainability Fund Package - Carbon Metrics','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_CA_MET_AUM_LOW_CA_RISK_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Percent of AUM with Low Carbon Risk', 'Percent of AUM with Low Carbon Risk'
+            union
+            select @dic_id, 'FR', 'Percent of AUM with Low Carbon Risk', 'Percent of AUM with Low Carbon Risk'
+
+            insert into ref_esg_fields values ('MS_CA_MET_AUM_LOW_CA_RISK_PER','MORNING_STAR','Sustainability Fund Package - Carbon Metrics',@dic_id,null,null,'Sustainability Fund Package - Carbon Metrics','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_CA_MET_AUM_SEV_CA_RISK_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Percent of AUM with Severe Carbon Risk', 'Percent of AUM with Severe Carbon Risk'
+            union
+            select @dic_id, 'FR', 'Percent of AUM with Severe Carbon Risk', 'Percent of AUM with Severe Carbon Risk'
+
+            insert into ref_esg_fields values ('MS_CA_MET_AUM_SEV_CA_RISK_PER','MORNING_STAR','Sustainability Fund Package - Carbon Metrics',@dic_id,null,null,'Sustainability Fund Package - Carbon Metrics','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_CA_MET_CA_EXP_SCORE') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Carbon Exposure Score', 'Carbon Exposure Score'
+            union
+            select @dic_id, 'FR', 'Carbon Exposure Score', 'Carbon Exposure Score'
+
+            insert into ref_esg_fields values ('MS_CA_MET_CA_EXP_SCORE','MORNING_STAR','Sustainability Fund Package - Carbon Metrics',@dic_id,null,null,'Sustainability Fund Package - Carbon Metrics','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_CA_MET_EMISS_SCOPE_1_VAL') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Emissions Scope 1', 'Emissions Scope 1'
+            union
+            select @dic_id, 'FR', 'Emissions Scope 1', 'Emissions Scope 1'
+
+            insert into ref_esg_fields values ('MS_CA_MET_EMISS_SCOPE_1_VAL','MORNING_STAR','Sustainability Fund Package - Carbon Metrics',@dic_id,null,null,'Sustainability Fund Package - Carbon Metrics','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_CA_MET_EMISS_SCOPE_2_VAL') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Emissions Scope 2', 'Emissions Scope 2'
+            union
+            select @dic_id, 'FR', 'Emissions Scope 2', 'Emissions Scope 2'
+
+            insert into ref_esg_fields values ('MS_CA_MET_EMISS_SCOPE_2_VAL','MORNING_STAR','Sustainability Fund Package - Carbon Metrics',@dic_id,null,null,'Sustainability Fund Package - Carbon Metrics','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_CA_MET_ARCTIC_OIL_GAS_EXPLOR_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Arctic Oil and Gas Exploration Involvement', 'Arctic Oil and Gas Exploration Involvement'
+            union
+            select @dic_id, 'FR', 'Arctic Oil and Gas Exploration Involvement', 'Arctic Oil and Gas Exploration Involvement'
+
+            insert into ref_esg_fields values ('MS_CA_MET_ARCTIC_OIL_GAS_EXPLOR_INV_PER','MORNING_STAR','Sustainability Fund Package - Carbon Metrics',@dic_id,null,null,'Sustainability Fund Package - Carbon Metrics','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_CA_MET_OIL_GAS_PEROD_SERV_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Oil and Gas Products and Service Involvement', 'Oil and Gas Products and Service Involvement'
+            union
+            select @dic_id, 'FR', 'Oil and Gas Products and Service Involvement', 'Oil and Gas Products and Service Involvement'
+
+            insert into ref_esg_fields values ('MS_CA_MET_OIL_GAS_PEROD_SERV_INV_PER','MORNING_STAR','Sustainability Fund Package - Carbon Metrics',@dic_id,null,null,'Sustainability Fund Package - Carbon Metrics','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_CA_MET_AUM_NEG_CA_RISK_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Percent of AUM with Negligible Carbon Risk', 'Percent of AUM with Negligible Carbon Risk'
+            union
+            select @dic_id, 'FR', 'Percent of AUM with Negligible Carbon Risk', 'Percent of AUM with Negligible Carbon Risk'
+
+            insert into ref_esg_fields values ('MS_CA_MET_AUM_NEG_CA_RISK_PER','MORNING_STAR','Sustainability Fund Package - Carbon Metrics',@dic_id,null,null,'Sustainability Fund Package - Carbon Metrics','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_CA_MET_AUM_MED_CA_RISK_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Percent of AUM with Medium Carbon Risk', 'Percent of AUM with Medium Carbon Risk'
+            union
+            select @dic_id, 'FR', 'Percent of AUM with Medium Carbon Risk', 'Percent of AUM with Medium Carbon Risk'
+
+            insert into ref_esg_fields values ('MS_CA_MET_AUM_MED_CA_RISK_PER','MORNING_STAR','Sustainability Fund Package - Carbon Metrics',@dic_id,null,null,'Sustainability Fund Package - Carbon Metrics','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_CA_MET_AUM_HIGH_CA_RISK_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Percent of AUM with High Carbon Risk', 'Percent of AUM with High Carbon Risk'
+            union
+            select @dic_id, 'FR', 'Percent of AUM with High Carbon Risk', 'Percent of AUM with High Carbon Risk'
+
+            insert into ref_esg_fields values ('MS_CA_MET_AUM_HIGH_CA_RISK_PER','MORNING_STAR','Sustainability Fund Package - Carbon Metrics',@dic_id,null,null,'Sustainability Fund Package - Carbon Metrics','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_CA_MET_CA_INTENS_VAL') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Carbon Intensity', 'Carbon Intensity'
+            union
+            select @dic_id, 'FR', 'Carbon Intensity', 'Carbon Intensity'
+
+            insert into ref_esg_fields values ('MS_CA_MET_CA_INTENS_VAL','MORNING_STAR','Sustainability Fund Package - Carbon Metrics',@dic_id,null,null,'Sustainability Fund Package - Carbon Metrics','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_CA_MET_FOSSIL_FUEL_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Fossil Fuel Involvement', 'Fossil Fuel Involvement'
+            union
+            select @dic_id, 'FR', 'Fossil Fuel Involvement', 'Fossil Fuel Involvement'
+
+            insert into ref_esg_fields values ('MS_CA_MET_FOSSIL_FUEL_INV_PER','MORNING_STAR','Sustainability Fund Package - Carbon Metrics',@dic_id,null,null,'Sustainability Fund Package - Carbon Metrics','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_CA_MET_THERMAL_CO_POW_GEN_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Thermal Coal Power Generation Involvement', 'Thermal Coal Power Generation Involvement'
+            union
+            select @dic_id, 'FR', 'Thermal Coal Power Generation Involvement', 'Thermal Coal Power Generation Involvement'
+
+            insert into ref_esg_fields values ('MS_CA_MET_THERMAL_CO_POW_GEN_INV_PER','MORNING_STAR','Sustainability Fund Package - Carbon Metrics',@dic_id,null,null,'Sustainability Fund Package - Carbon Metrics','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_CA_MET_THERMAL_CO_EXT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Thermal Coal Extraction Involvement', 'Thermal Coal Extraction Involvement'
+            union
+            select @dic_id, 'FR', 'Thermal Coal Extraction Involvement', 'Thermal Coal Extraction Involvement'
+
+            insert into ref_esg_fields values ('MS_CA_MET_THERMAL_CO_EXT_INV_PER','MORNING_STAR','Sustainability Fund Package - Carbon Metrics',@dic_id,null,null,'Sustainability Fund Package - Carbon Metrics','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_CA_MET_OIL_SANDS_EXT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Oil Sands Extraction Involvement', 'Oil Sands Extraction Involvement'
+            union
+            select @dic_id, 'FR', 'Oil Sands Extraction Involvement', 'Oil Sands Extraction Involvement'
+
+            insert into ref_esg_fields values ('MS_CA_MET_OIL_SANDS_EXT_INV_PER','MORNING_STAR','Sustainability Fund Package - Carbon Metrics',@dic_id,null,null,'Sustainability Fund Package - Carbon Metrics','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_CA_MET_CA_SOLUTIONS_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Carbon Solutions Involvement', 'Carbon Solutions Involvement'
+            union
+            select @dic_id, 'FR', 'Carbon Solutions Involvement', 'Carbon Solutions Involvement'
+
+            insert into ref_esg_fields values ('MS_CA_MET_CA_SOLUTIONS_INV_PER','MORNING_STAR','Sustainability Fund Package - Carbon Metrics',@dic_id,null,null,'Sustainability Fund Package - Carbon Metrics','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_CA_MET_OIL_GAS_PEROD_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Oil and Gas Production Involvement', 'Oil and Gas Production Involvement'
+            union
+            select @dic_id, 'FR', 'Oil and Gas Production Involvement', 'Oil and Gas Production Involvement'
+
+            insert into ref_esg_fields values ('MS_CA_MET_OIL_GAS_PEROD_INV_PER','MORNING_STAR','Sustainability Fund Package - Carbon Metrics',@dic_id,null,null,'Sustainability Fund Package - Carbon Metrics','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_CA_MET_OIL_GAS_GEN_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Oil and Gas Generation Involvement', 'Oil and Gas Generation Involvement'
+            union
+            select @dic_id, 'FR', 'Oil and Gas Generation Involvement', 'Oil and Gas Generation Involvement'
+
+            insert into ref_esg_fields values ('MS_CA_MET_OIL_GAS_GEN_INV_PER','MORNING_STAR','Sustainability Fund Package - Carbon Metrics',@dic_id,null,null,'Sustainability Fund Package - Carbon Metrics','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_HUM_DEV_ELIG_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Human Development % of Eligible Portfolio Involved', 'Human Development % of Eligible Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'Human Development % of Eligible Portfolio Involved', 'Human Development % of Eligible Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_HUM_DEV_ELIG_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_RES_SEC_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Resource Security % of Portfolio Involved', 'Resource Security % of Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'Resource Security % of Portfolio Involved', 'Resource Security % of Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_RES_SEC_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_RES_SEC_ELIG_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Resource Security % of Eligible Portfolio Involved', 'Resource Security % of Eligible Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'Resource Security % of Eligible Portfolio Involved', 'Resource Security % of Eligible Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_RES_SEC_ELIG_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_CLIM_ACT_COV_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Climate Action % of Covered Portfolio Involved', 'Climate Action % of Covered Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'Climate Action % of Covered Portfolio Involved', 'Climate Action % of Covered Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_CLIM_ACT_COV_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_HUM_DEV_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Human Development % of Portfolio Involved', 'Human Development % of Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'Human Development % of Portfolio Involved', 'Human Development % of Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_HUM_DEV_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_HUM_DEV_COV_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Human Development % of Covered Portfolio Involved', 'Human Development % of Covered Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'Human Development % of Covered Portfolio Involved', 'Human Development % of Covered Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_HUM_DEV_COV_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_RES_SEC_COV_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Resource Security % of Covered Portfolio Involved', 'Resource Security % of Covered Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'Resource Security % of Covered Portfolio Involved', 'Resource Security % of Covered Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_RES_SEC_COV_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_CLIM_ACT_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Climate Action % of Portfolio Involved', 'Climate Action % of Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'Climate Action % of Portfolio Involved', 'Climate Action % of Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_CLIM_ACT_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_CLIM_ACT_ELIG_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Climate Action % of Eligible Portfolio Involved', 'Climate Action % of Eligible Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'Climate Action % of Eligible Portfolio Involved', 'Climate Action % of Eligible Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_CLIM_ACT_ELIG_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_BASIC_NEEDS_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'Basic Needs % of Portfolio Involved', 'Basic Needs % of Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'Basic Needs % of Portfolio Involved', 'Basic Needs % of Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_BASIC_NEEDS_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_2_ZERO_HUNG_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 2 Zero Hunger % of Portfolio Involved', 'SDG 2 Zero Hunger % of Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 2 Zero Hunger % of Portfolio Involved', 'SDG 2 Zero Hunger % of Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_2_ZERO_HUNG_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_2_ZERO_HUNG_ELIG_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 2 Zero Hunger % of Eligible Portfolio Involved', 'SDG 2 Zero Hunger % of Eligible Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 2 Zero Hunger % of Eligible Portfolio Involved', 'SDG 2 Zero Hunger % of Eligible Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_2_ZERO_HUNG_ELIG_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_2_ZERO_HUNG_COV_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 2 Zero Hunger % of Covered Portfolio Involved', 'SDG 2 Zero Hunger % of Covered Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 2 Zero Hunger % of Covered Portfolio Involved', 'SDG 2 Zero Hunger % of Covered Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_2_ZERO_HUNG_COV_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_3_HEALTH_W_BEING_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 3 Good Health and Well-Being % of Portfolio Involved', 'SDG 3 Good Health and Well-Being % of Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 3 Good Health and Well-Being % of Portfolio Involved', 'SDG 3 Good Health and Well-Being % of Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_3_HEALTH_W_BEING_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_3_HEALTH_W_BEING_ELIG_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 3 Good Health and Well-Being % of Eligible Portfolio Involved', 'SDG 3 Good Health and Well-Being % of Eligible Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 3 Good Health and Well-Being % of Eligible Portfolio Involved', 'SDG 3 Good Health and Well-Being % of Eligible Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_3_HEALTH_W_BEING_ELIG_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_3_HEALTH_W_BEING_COV_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 3 Good Health and Well-Being % of Covered Portfolio Involved', 'SDG 3 Good Health and Well-Being % of Covered Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 3 Good Health and Well-Being % of Covered Portfolio Involved', 'SDG 3 Good Health and Well-Being % of Covered Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_3_HEALTH_W_BEING_COV_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_4_QLT_EDU_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 4 Quality Education % of Portfolio Involved', 'SDG 4 Quality Education % of Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 4 Quality Education % of Portfolio Involved', 'SDG 4 Quality Education % of Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_4_QLT_EDU_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_4_QLT_EDU_ELIG_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 4 Quality Education % of Eligible Portfolio Involved', 'SDG 4 Quality Education % of Eligible Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 4 Quality Education % of Eligible Portfolio Involved', 'SDG 4 Quality Education % of Eligible Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_4_QLT_EDU_ELIG_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_4_QLT_EDU_COV_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 4 Quality Education % of Covered Portfolio Involved', 'SDG 4 Quality Education % of Covered Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 4 Quality Education % of Covered Portfolio Involved', 'SDG 4 Quality Education % of Covered Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_4_QLT_EDU_COV_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_6_CLN_WAT_SAN_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 6 Clean Water and Sanitation % of Portfolio Involved', 'SDG 6 Clean Water and Sanitation % of Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 6 Clean Water and Sanitation % of Portfolio Involved', 'SDG 6 Clean Water and Sanitation % of Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_6_CLN_WAT_SAN_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_6_CLN_WAT_SAN_ELIG_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 6 Clean Water and Sanitation % of Eligible Portfolio Involved', 'SDG 6 Clean Water and Sanitation % of Eligible Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 6 Clean Water and Sanitation % of Eligible Portfolio Involved', 'SDG 6 Clean Water and Sanitation % of Eligible Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_6_CLN_WAT_SAN_ELIG_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_6_CLN_WAT_SAN_COV_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 6 Clean Water and Sanitation % of Covered Portfolio Involved', 'SDG 6 Clean Water and Sanitation % of Covered Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 6 Clean Water and Sanitation % of Covered Portfolio Involved', 'SDG 6 Clean Water and Sanitation % of Covered Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_6_CLN_WAT_SAN_COV_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_7_AFF_CLN_ENE_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 7 Affordable and Clean Energy % of Portfolio Involved', 'SDG 7 Affordable and Clean Energy % of Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 7 Affordable and Clean Energy % of Portfolio Involved', 'SDG 7 Affordable and Clean Energy % of Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_7_AFF_CLN_ENE_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_7_AFF_CLN_ENE_ELIG_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 7 Affordable and Clean Energy % of Eligible Portfolio Involved', 'SDG 7 Affordable and Clean Energy % of Eligible Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 7 Affordable and Clean Energy % of Eligible Portfolio Involved', 'SDG 7 Affordable and Clean Energy % of Eligible Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_7_AFF_CLN_ENE_ELIG_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_7_AFF_CLN_ENE_COV_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 7 Affordable and Clean Energy % of Covered Portfolio Involved', 'SDG 7 Affordable and Clean Energy % of Covered Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 7 Affordable and Clean Energy % of Covered Portfolio Involved', 'SDG 7 Affordable and Clean Energy % of Covered Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_7_AFF_CLN_ENE_COV_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_9_IND_INN_INF_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 9 Industry Innovation and Infrastructure % of Portfolio Involved', 'SDG 9 Industry Innovation and Infrastructure % of Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 9 Industry Innovation and Infrastructure % of Portfolio Involved', 'SDG 9 Industry Innovation and Infrastructure % of Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_9_IND_INN_INF_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_9_IND_INN_INF_ELIG_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 9 Industry Innovation and Infrastructure % of Eligible Portfolio Involved', 'SDG 9 Industry Innovation and Infrastructure % of Eligible Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 9 Industry Innovation and Infrastructure % of Eligible Portfolio Involved', 'SDG 9 Industry Innovation and Infrastructure % of Eligible Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_9_IND_INN_INF_ELIG_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_9_IND_INN_INF_COV_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 9 Industry Innovation and Infrastructure % of Covered Portfolio Involved', 'SDG 9 Industry Innovation and Infrastructure % of Covered Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 9 Industry Innovation and Infrastructure % of Covered Portfolio Involved', 'SDG 9 Industry Innovation and Infrastructure % of Covered Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_9_IND_INN_INF_COV_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_10_RED_INEQ_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 10 Reduced Inequalities % of Portfolio Involved', 'SDG 10 Reduced Inequalities % of Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 10 Reduced Inequalities % of Portfolio Involved', 'SDG 10 Reduced Inequalities % of Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_10_RED_INEQ_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_10_RED_INEQ_ELIG_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 10 Reduced Inequalities % of Eligible Portfolio Involved', 'SDG 10 Reduced Inequalities % of Eligible Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 10 Reduced Inequalities % of Eligible Portfolio Involved', 'SDG 10 Reduced Inequalities % of Eligible Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_10_RED_INEQ_ELIG_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_10_RED_INEQ_COV_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 10 Reduced Inequalities % of Covered Portfolio Involved', 'SDG 10 Reduced Inequalities % of Covered Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 10 Reduced Inequalities % of Covered Portfolio Involved', 'SDG 10 Reduced Inequalities % of Covered Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_10_RED_INEQ_COV_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_11_SUST_CIT_COMM_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 11 Sustainable Cities and Communities % of Portfolio Involved', 'SDG 11 Sustainable Cities and Communities % of Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 11 Sustainable Cities and Communities % of Portfolio Involved', 'SDG 11 Sustainable Cities and Communities % of Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_11_SUST_CIT_COMM_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_11_SUST_CIT_COMM_ELIG_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 11 Sustainable Cities and Communities % of Eligible Portfolio Involved', 'SDG 11 Sustainable Cities and Communities % of Eligible Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 11 Sustainable Cities and Communities % of Eligible Portfolio Involved', 'SDG 11 Sustainable Cities and Communities % of Eligible Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_11_SUST_CIT_COMM_ELIG_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_11_SUST_CIT_COMM_COV_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 11 Sustainable Cities and Communities % of Covered Portfolio Involved', 'SDG 11 Sustainable Cities and Communities % of Covered Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 11 Sustainable Cities and Communities % of Covered Portfolio Involved', 'SDG 11 Sustainable Cities and Communities % of Covered Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_11_SUST_CIT_COMM_COV_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_12_RESP_CONS_PEROD_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 12 Responsible Consumption and Production % of Portfolio Involved', 'SDG 12 Responsible Consumption and Production % of Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 12 Responsible Consumption and Production % of Portfolio Involved', 'SDG 12 Responsible Consumption and Production % of Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_12_RESP_CONS_PEROD_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_12_RESP_CONS_PEROD_ELIG_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 12 Responsible Consumption and Production % of Eligible Portfolio Involved', 'SDG 12 Responsible Consumption and Production % of Eligible Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 12 Responsible Consumption and Production % of Eligible Portfolio Involved', 'SDG 12 Responsible Consumption and Production % of Eligible Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_12_RESP_CONS_PEROD_ELIG_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_12_RESP_CONS_PEROD_COV_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 12 Responsible Consumption and Production % of Covered Portfolio Involved', 'SDG 12 Responsible Consumption and Production % of Covered Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 12 Responsible Consumption and Production % of Covered Portfolio Involved', 'SDG 12 Responsible Consumption and Production % of Covered Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_12_RESP_CONS_PEROD_COV_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_13_CLIM_ACT_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 13 Climate Action % of Portfolio Involved', 'SDG 13 Climate Action % of Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 13 Climate Action % of Portfolio Involved', 'SDG 13 Climate Action % of Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_13_CLIM_ACT_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_13_CLIM_ACT_ELIG_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 13 Climate Action % of Eligible Portfolio Involved', 'SDG 13 Climate Action % of Eligible Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 13 Climate Action % of Eligible Portfolio Involved', 'SDG 13 Climate Action % of Eligible Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_13_CLIM_ACT_ELIG_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_13_CLIM_ACT_COV_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 13 Climate Action % of Covered Portfolio Involved', 'SDG 13 Climate Action % of Covered Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 13 Climate Action % of Covered Portfolio Involved', 'SDG 13 Climate Action % of Covered Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_13_CLIM_ACT_COV_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_14_LIFE_BEL_WAT_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 14 Life Below Water % of Portfolio Involved', 'SDG 14 Life Below Water % of Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 14 Life Below Water % of Portfolio Involved', 'SDG 14 Life Below Water % of Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_14_LIFE_BEL_WAT_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_14_LIFE_BEL_WAT_ELIG_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 14 Life Below Water % of Eligible Portfolio Involved', 'SDG 14 Life Below Water % of Eligible Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 14 Life Below Water % of Eligible Portfolio Involved', 'SDG 14 Life Below Water % of Eligible Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_14_LIFE_BEL_WAT_ELIG_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_14_LIFE_BEL_WAT_COV_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 14 Life Below Water % of Covered Portfolio Involved', 'SDG 14 Life Below Water % of Covered Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 14 Life Below Water % of Covered Portfolio Involved', 'SDG 14 Life Below Water % of Covered Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_14_LIFE_BEL_WAT_COV_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_15_LIFE_LAND_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 15 Life on Land % of Portfolio Involved', 'SDG 15 Life on Land % of Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 15 Life on Land % of Portfolio Involved', 'SDG 15 Life on Land % of Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_15_LIFE_LAND_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_15_LIFE_LAND_ELIG_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 15 Life on Land % of Eligible Portfolio Involved', 'SDG 15 Life on Land % of Eligible Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 15 Life on Land % of Eligible Portfolio Involved', 'SDG 15 Life on Land % of Eligible Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_15_LIFE_LAND_ELIG_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_15_LIFE_LAND_COV_PORT_INV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 15 Life on Land % of Covered Portfolio Involved', 'SDG 15 Life on Land % of Covered Portfolio Involved'
+            union
+            select @dic_id, 'FR', 'SDG 15 Life on Land % of Covered Portfolio Involved', 'SDG 15 Life on Land % of Covered Portfolio Involved'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_15_LIFE_LAND_COV_PORT_INV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_2_ZERO_HUNG_AVG_REV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 2 Zero Hunger Average Revenue %', 'SDG 2 Zero Hunger Average Revenue %'
+            union
+            select @dic_id, 'FR', 'SDG 2 Zero Hunger Average Revenue %', 'SDG 2 Zero Hunger Average Revenue %'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_2_ZERO_HUNG_AVG_REV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_3_HEALTH_W_BEING_AVG_REV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 3 Good Health and Well-Being Average Revenue %', 'SDG 3 Good Health and Well-Being Average Revenue %'
+            union
+            select @dic_id, 'FR', 'SDG 3 Good Health and Well-Being Average Revenue %', 'SDG 3 Good Health and Well-Being Average Revenue %'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_3_HEALTH_W_BEING_AVG_REV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_4_QLT_EDU_AVG_REV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 4 Quality Education Average Revenue %', 'SDG 4 Quality Education Average Revenue %'
+            union
+            select @dic_id, 'FR', 'SDG 4 Quality Education Average Revenue %', 'SDG 4 Quality Education Average Revenue %'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_4_QLT_EDU_AVG_REV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_6_CLN_WAT_SAN_AVG_REV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 6 Clean Water and Sanitation Average Revenue %', 'SDG 6 Clean Water and Sanitation Average Revenue %'
+            union
+            select @dic_id, 'FR', 'SDG 6 Clean Water and Sanitation Average Revenue %', 'SDG 6 Clean Water and Sanitation Average Revenue %'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_6_CLN_WAT_SAN_AVG_REV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_7_AFF_CLN_ENE_AVG_REV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 7 Affordable and Clean Energy Average Revenue %', 'SDG 7 Affordable and Clean Energy Average Revenue %'
+            union
+            select @dic_id, 'FR', 'SDG 7 Affordable and Clean Energy Average Revenue %', 'SDG 7 Affordable and Clean Energy Average Revenue %'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_7_AFF_CLN_ENE_AVG_REV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_9_IND_INN_INF_AVG_REV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 9 Industry Innovation and Infrastructure Average Revenue %', 'SDG 9 Industry Innovation and Infrastructure Average Revenue %'
+            union
+            select @dic_id, 'FR', 'SDG 9 Industry Innovation and Infrastructure Average Revenue %', 'SDG 9 Industry Innovation and Infrastructure Average Revenue %'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_9_IND_INN_INF_AVG_REV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_10_RED_INEQ_AVG_REV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 10 Reduced Inequalities Average Revenue %', 'SDG 10 Reduced Inequalities Average Revenue %'
+            union
+            select @dic_id, 'FR', 'SDG 10 Reduced Inequalities Average Revenue %', 'SDG 10 Reduced Inequalities Average Revenue %'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_10_RED_INEQ_AVG_REV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_11_SUST_CIT_COMM_AVG_REV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 11 Sustainable Cities and Communities Average Revenue %', 'SDG 11 Sustainable Cities and Communities Average Revenue %'
+            union
+            select @dic_id, 'FR', 'SDG 11 Sustainable Cities and Communities Average Revenue %', 'SDG 11 Sustainable Cities and Communities Average Revenue %'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_11_SUST_CIT_COMM_AVG_REV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_12_RESP_CONS_PEROD_AVG_REV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 12 Responsible Consumption and Production Average Revenue %', 'SDG 12 Responsible Consumption and Production Average Revenue %'
+            union
+            select @dic_id, 'FR', 'SDG 12 Responsible Consumption and Production Average Revenue %', 'SDG 12 Responsible Consumption and Production Average Revenue %'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_12_RESP_CONS_PEROD_AVG_REV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_13_CLIM_ACT_AVG_REV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 13 Climate Action Average Revenue %', 'SDG 13 Climate Action Average Revenue %'
+            union
+            select @dic_id, 'FR', 'SDG 13 Climate Action Average Revenue %', 'SDG 13 Climate Action Average Revenue %'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_13_CLIM_ACT_AVG_REV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_14_LIFE_BEL_WAT_AVG_REV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 14 Life Below Water Average Revenue %', 'SDG 14 Life Below Water Average Revenue %'
+            union
+            select @dic_id, 'FR', 'SDG 14 Life Below Water Average Revenue %', 'SDG 14 Life Below Water Average Revenue %'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_14_LIFE_BEL_WAT_AVG_REV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_FI_SDG_15_LIFE_LAND_AVG_REV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'SDG 15 Life on Land Average Revenue %', 'SDG 15 Life on Land Average Revenue %'
+            union
+            select @dic_id, 'FR', 'SDG 15 Life on Land Average Revenue %', 'SDG 15 Life on Land Average Revenue %'
+
+            insert into ref_esg_fields values ('MS_FI_SDG_15_LIFE_LAND_AVG_REV_PER','MORNING_STAR','Morningstar Fund Impact & SDGs',@dic_id,null,null,'Morningstar Fund Impact & SDGs','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_SFDR_PERODUCT_TYPE_NUM') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET SFDR Product Type', 'EET SFDR Product Type'
+            union
+            select @dic_id, 'FR', 'EET SFDR Product Type', 'EET SFDR Product Type'
+
+            insert into ref_esg_fields values ('MS_EET_SFDR_PERODUCT_TYPE_NUM','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','int',null,20040,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_ENV_SI_NOT_EU_TAX_ART_9_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Environmentally Sustainable Investment Not EU Taxonomy Article 9', 'EET Environmentally Sustainable Investment Not EU Taxonomy Article 9'
+            union
+            select @dic_id, 'FR', 'EET Environmentally Sustainable Investment Not EU Taxonomy Article 9', 'EET Environmentally Sustainable Investment Not EU Taxonomy Article 9'
+
+            insert into ref_esg_fields values ('MS_EET_ENV_SI_NOT_EU_TAX_ART_9_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,20240,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_ENV_SI_NOT_EU_TAX_ART_8_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Environmentally Sustainable Investment Not EU Taxonomy Article 8', 'EET Environmentally Sustainable Investment Not EU Taxonomy Article 8'
+            union
+            select @dic_id, 'FR', 'EET Environmentally Sustainable Investment Not EU Taxonomy Article 8', 'EET Environmentally Sustainable Investment Not EU Taxonomy Article 8'
+
+            insert into ref_esg_fields values ('MS_EET_ENV_SI_NOT_EU_TAX_ART_8_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,20200,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_MIN_SI_ENV_OBJ_ART_9_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Minimum Sustainable Investment With Environmental Objective Article 9', 'EET Minimum Sustainable Investment With Environmental Objective Article 9'
+            union
+            select @dic_id, 'FR', 'EET Minimum Sustainable Investment With Environmental Objective Article 9', 'EET Minimum Sustainable Investment With Environmental Objective Article 9'
+
+            insert into ref_esg_fields values ('MS_EET_MIN_SI_ENV_OBJ_ART_9_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,20220,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_UNCON_WPN_EXC_THRESHOLD_TYPE_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Unconventional Weapons Exclusion Threshold Type', 'EET Unconventional Weapons Exclusion Threshold Type'
+            union
+            select @dic_id, 'FR', 'EET Unconventional Weapons Exclusion Threshold Type', 'EET Unconventional Weapons Exclusion Threshold Type'
+
+            insert into ref_esg_fields values ('MS_EET_UNCON_WPN_EXC_THRESHOLD_TYPE_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_UNCON_WPS_EXC_PART_VAL_CHAIN_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Unconventional Weapons Exclusion Part of Value Chain', 'EET Unconventional Weapons Exclusion Part of Value Chain'
+            union
+            select @dic_id, 'FR', 'EET Unconventional Weapons Exclusion Part of Value Chain', 'EET Unconventional Weapons Exclusion Part of Value Chain'
+
+            insert into ref_esg_fields values ('MS_EET_UNCON_WPS_EXC_PART_VAL_CHAIN_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_GREEN_GAS_EMISS_SCOPE_1_VAL') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Greenhouse Gas Emissions Scope 1 Value', 'EET Greenhouse Gas Emissions Scope 1 Value'
+            union
+            select @dic_id, 'FR', 'EET Greenhouse Gas Emissions Scope 1 Value', 'EET Greenhouse Gas Emissions Scope 1 Value'
+
+            insert into ref_esg_fields values ('MS_EET_GREEN_GAS_EMISS_SCOPE_1_VAL','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_GREEN_GAS_EMISS_SCOPE_1_COV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Greenhouse Gas Emissions Scope 1 Coverage', 'EET Greenhouse Gas Emissions Scope 1 Coverage'
+            union
+            select @dic_id, 'FR', 'EET Greenhouse Gas Emissions Scope 1 Coverage', 'EET Greenhouse Gas Emissions Scope 1 Coverage'
+
+            insert into ref_esg_fields values ('MS_EET_GREEN_GAS_EMISS_SCOPE_1_COV_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_GREEN_GAS_EMISS_TOTAL_SCOPE_1_2_VAL') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Greenhouse Gas Emissions Total Scope 1 And 2 Value', 'EET Greenhouse Gas Emissions Total Scope 1 And 2 Value'
+            union
+            select @dic_id, 'FR', 'EET Greenhouse Gas Emissions Total Scope 1 And 2 Value', 'EET Greenhouse Gas Emissions Total Scope 1 And 2 Value'
+
+            insert into ref_esg_fields values ('MS_EET_GREEN_GAS_EMISS_TOTAL_SCOPE_1_2_VAL','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_GREEN_GAS_EMISS_TOTAL_SCOPE_1_2_COV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Greenhouse Gas Emissions Total Scope 1 And 2 Coverage', 'EET Greenhouse Gas Emissions Total Scope 1 And 2 Coverage'
+            union
+            select @dic_id, 'FR', 'EET Greenhouse Gas Emissions Total Scope 1 And 2 Coverage', 'EET Greenhouse Gas Emissions Total Scope 1 And 2 Coverage'
+
+            insert into ref_esg_fields values ('MS_EET_GREEN_GAS_EMISS_TOTAL_SCOPE_1_2_COV_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_GREEN_GAS_EMISS_TOTAL_SCOPE_1_2_3_VAL') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Greenhouse Gas Emissions Total Scope 1 And 2 And 3 Value', 'EET Greenhouse Gas Emissions Total Scope 1 And 2 And 3 Value'
+            union
+            select @dic_id, 'FR', 'EET Greenhouse Gas Emissions Total Scope 1 And 2 And 3 Value', 'EET Greenhouse Gas Emissions Total Scope 1 And 2 And 3 Value'
+
+            insert into ref_esg_fields values ('MS_EET_GREEN_GAS_EMISS_TOTAL_SCOPE_1_2_3_VAL','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_CA_FOOT_SCOPE_1_2_3_COV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Carbon Footprint Scope 1 And 2 And 3 Coverage', 'EET Carbon Footprint Scope 1 And 2 And 3 Coverage'
+            union
+            select @dic_id, 'FR', 'EET Carbon Footprint Scope 1 And 2 And 3 Coverage', 'EET Carbon Footprint Scope 1 And 2 And 3 Coverage'
+
+            insert into ref_esg_fields values ('MS_EET_CA_FOOT_SCOPE_1_2_3_COV_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_GREEN_GAS_INTENS_SCOPE_1_2_VAL') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Greenhouse Gas Intensity Scope 1 And 2 Value', 'EET Greenhouse Gas Intensity Scope 1 And 2 Value'
+            union
+            select @dic_id, 'FR', 'EET Greenhouse Gas Intensity Scope 1 And 2 Value', 'EET Greenhouse Gas Intensity Scope 1 And 2 Value'
+
+            insert into ref_esg_fields values ('MS_EET_GREEN_GAS_INTENS_SCOPE_1_2_VAL','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_GREEN_GAS_INTENS_SCOPE_1_2_COV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Greenhouse Gas Intensity Scope 1 And 2 Coverage', 'EET Greenhouse Gas Intensity Scope 1 And 2 Coverage'
+            union
+            select @dic_id, 'FR', 'EET Greenhouse Gas Intensity Scope 1 And 2 Coverage', 'EET Greenhouse Gas Intensity Scope 1 And 2 Coverage'
+
+            insert into ref_esg_fields values ('MS_EET_GREEN_GAS_INTENS_SCOPE_1_2_COV_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_UNGC_PRINC_OECD_GUIDE_VIOL_VAL') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET UNGC Principles Or OECD Guidelines Violations Value', 'EET UNGC Principles Or OECD Guidelines Violations Value'
+            union
+            select @dic_id, 'FR', 'EET UNGC Principles Or OECD Guidelines Violations Value', 'EET UNGC Principles Or OECD Guidelines Violations Value'
+
+            insert into ref_esg_fields values ('MS_EET_UNGC_PRINC_OECD_GUIDE_VIOL_VAL','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_UNGC_PRINC_OECD_GUIDE_VIOL_CON_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET UNGC Principles Or OECD Guidelines Violations Considered', 'EET UNGC Principles Or OECD Guidelines Violations Considered'
+            union
+            select @dic_id, 'FR', 'EET UNGC Principles Or OECD Guidelines Violations Considered', 'EET UNGC Principles Or OECD Guidelines Violations Considered'
+
+            insert into ref_esg_fields values ('MS_EET_UNGC_PRINC_OECD_GUIDE_VIOL_CON_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_UNGC_PRINC_OECD_GUIDE_VIOL_COV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET UNGC Principles Or OECD Guidelines Violations Coverage', 'EET UNGC Principles Or OECD Guidelines Violations Coverage'
+            union
+            select @dic_id, 'FR', 'EET UNGC Principles Or OECD Guidelines Violations Coverage', 'EET UNGC Principles Or OECD Guidelines Violations Coverage'
+
+            insert into ref_esg_fields values ('MS_EET_UNGC_PRINC_OECD_GUIDE_VIOL_COV_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_UNGC_PRINC_OECD_GUIDE_VIOL_ELIG_ASSETS_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET UNGC Principles Or OECD Guidelines Violations Eligible Assets', 'EET UNGC Principles Or OECD Guidelines Violations Eligible Assets'
+            union
+            select @dic_id, 'FR', 'EET UNGC Principles Or OECD Guidelines Violations Eligible Assets', 'EET UNGC Principles Or OECD Guidelines Violations Eligible Assets'
+
+            insert into ref_esg_fields values ('MS_EET_UNGC_PRINC_OECD_GUIDE_VIOL_ELIG_ASSETS_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_PRINC_ADV_IMP_CON_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Principle Adverse Impact Consideration', 'EET Principle Adverse Impact Consideration'
+            union
+            select @dic_id, 'FR', 'EET Principle Adverse Impact Consideration', 'EET Principle Adverse Impact Consideration'
+
+            insert into ref_esg_fields values ('MS_EET_PRINC_ADV_IMP_CON_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,20100,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_MIN_SI_SOC_OBJ_ART_9_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Minimum Sustainable Investment Social Objective Article 9', 'EET Minimum Sustainable Investment Social Objective Article 9'
+            union
+            select @dic_id, 'FR', 'EET Minimum Sustainable Investment Social Objective Article 9', 'EET Minimum Sustainable Investment Social Objective Article 9'
+
+            insert into ref_esg_fields values ('MS_EET_MIN_SI_SOC_OBJ_ART_9_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,20250,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_ESG_EXISTING_THEMATIC_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET ESG Existing Thematic', 'EET ESG Existing Thematic'
+            union
+            select @dic_id, 'FR', 'EET ESG Existing Thematic', 'EET ESG Existing Thematic'
+
+            insert into ref_esg_fields values ('MS_EET_ESG_EXISTING_THEMATIC_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,20260,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_ENV_THEMATIC_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Environmental Thematic', 'EET Environmental Thematic'
+            union
+            select @dic_id, 'FR', 'EET Environmental Thematic', 'EET Environmental Thematic'
+
+            insert into ref_esg_fields values ('MS_EET_ENV_THEMATIC_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,20270,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_SOC_THEMATIC_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Social Thematic', 'EET Social Thematic'
+            union
+            select @dic_id, 'FR', 'EET Social Thematic', 'EET Social Thematic'
+
+            insert into ref_esg_fields values ('MS_EET_SOC_THEMATIC_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,20280,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_GOV_THEMATIC_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Governance Thematic', 'EET Governance Thematic'
+            union
+            select @dic_id, 'FR', 'EET Governance Thematic', 'EET Governance Thematic'
+
+            insert into ref_esg_fields values ('MS_EET_GOV_THEMATIC_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,20290,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_ALIGN_SUST_DEV_GOALS_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Alignment With Sustainable Development Goals', 'EET Alignment With Sustainable Development Goals'
+            union
+            select @dic_id, 'FR', 'EET Alignment With Sustainable Development Goals', 'EET Alignment With Sustainable Development Goals'
+
+            insert into ref_esg_fields values ('MS_EET_ALIGN_SUST_DEV_GOALS_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,20300,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_EU_SFDR_MIN_PLAN_INVEST_SI_ENV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET EU SFDR Minimum Or Planned Investments Sustainable Investments Environmental', 'EET EU SFDR Minimum Or Planned Investments Sustainable Investments Environmental'
+            union
+            select @dic_id, 'FR', 'EET EU SFDR Minimum Or Planned Investments Sustainable Investments Environmental', 'EET EU SFDR Minimum Or Planned Investments Sustainable Investments Environmental'
+
+            insert into ref_esg_fields values ('MS_EET_EU_SFDR_MIN_PLAN_INVEST_SI_ENV_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,20440,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_LAST_REP_ASSET_ALLOC_DATE') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Last Reported Asset Allocation Date', 'EET Last Reported Asset Allocation Date'
+            union
+            select @dic_id, 'FR', 'EET Last Reported Asset Allocation Date', 'EET Last Reported Asset Allocation Date'
+
+            insert into ref_esg_fields values ('MS_EET_LAST_REP_ASSET_ALLOC_DATE','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','date',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_ESG_LABEL_STD_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET ESG Label Or Standard', 'EET ESG Label Or Standard'
+            union
+            select @dic_id, 'FR', 'EET ESG Label Or Standard', 'EET ESG Label Or Standard'
+
+            insert into ref_esg_fields values ('MS_EET_ESG_LABEL_STD_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,20060,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_MAIN_ESG_FOCUS_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Main ESG Focus', 'EET Main ESG Focus'
+            union
+            select @dic_id, 'FR', 'EET Main ESG Focus', 'EET Main ESG Focus'
+
+            insert into ref_esg_fields values ('MS_EET_MAIN_ESG_FOCUS_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,20090,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_SI_ART_8_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Sustainable Investments Article 8', 'EET Sustainable Investments Article 8'
+            union
+            select @dic_id, 'FR', 'EET Sustainable Investments Article 8', 'EET Sustainable Investments Article 8'
+
+            insert into ref_esg_fields values ('MS_EET_SI_ART_8_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,20170,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_MIN_PEROP_SI_ART_8_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Minimal Proportion of Sustainable Investments Article 8', 'EET Minimal Proportion of Sustainable Investments Article 8'
+            union
+            select @dic_id, 'FR', 'EET Minimal Proportion of Sustainable Investments Article 8', 'EET Minimal Proportion of Sustainable Investments Article 8'
+
+            insert into ref_esg_fields values ('MS_EET_MIN_PEROP_SI_ART_8_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,20180,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_SI_EU_TAX_ART_8_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Sustainable Investment EU Taxonomy Article 8', 'EET Sustainable Investment EU Taxonomy Article 8'
+            union
+            select @dic_id, 'FR', 'EET Sustainable Investment EU Taxonomy Article 8', 'EET Sustainable Investment EU Taxonomy Article 8'
+
+            insert into ref_esg_fields values ('MS_EET_SI_EU_TAX_ART_8_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,20190,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_SI_SOC_OBJ_ART_8_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Sustainable Investment Social Objective Article 8', 'EET Sustainable Investment Social Objective Article 8'
+            union
+            select @dic_id, 'FR', 'EET Sustainable Investment Social Objective Article 8', 'EET Sustainable Investment Social Objective Article 8'
+
+            insert into ref_esg_fields values ('MS_EET_SI_SOC_OBJ_ART_8_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,20210,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_ENV_SI_EU_TAX_ART_9_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Environmentally Sustainable Investment EU Taxonomy Article 9', 'EET Environmentally Sustainable Investment EU Taxonomy Article 9'
+            union
+            select @dic_id, 'FR', 'EET Environmentally Sustainable Investment EU Taxonomy Article 9', 'EET Environmentally Sustainable Investment EU Taxonomy Article 9'
+
+            insert into ref_esg_fields values ('MS_EET_ENV_SI_EU_TAX_ART_9_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,20230,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_REF_ESG_BENCH_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Reference ESG Benchmark', 'EET Reference ESG Benchmark'
+            union
+            select @dic_id, 'FR', 'EET Reference ESG Benchmark', 'EET Reference ESG Benchmark'
+
+            insert into ref_esg_fields values ('MS_EET_REF_ESG_BENCH_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,20370,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_BENCH_NAME_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Benchmark Name', 'EET Benchmark Name'
+            union
+            select @dic_id, 'FR', 'EET Benchmark Name', 'EET Benchmark Name'
+
+            insert into ref_esg_fields values ('MS_EET_BENCH_NAME_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,20380,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_MIN_PLAN_ASSET_ALLOC_DATE') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Minimum Or Planned Asset Allocation Date', 'EET Minimum Or Planned Asset Allocation Date'
+            union
+            select @dic_id, 'FR', 'EET Minimum Or Planned Asset Allocation Date', 'EET Minimum Or Planned Asset Allocation Date'
+
+            insert into ref_esg_fields values ('MS_EET_MIN_PLAN_ASSET_ALLOC_DATE','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','date',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_EU_SFDR_MIN_PLAN_INVEST_ENV_SOC_CHAR_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET EU SFDR Minimum Or Planned Investments With Environmental Or Social Characteristics', 'EET EU SFDR Minimum Or Planned Investments With Environmental Or Social Characteristics'
+            union
+            select @dic_id, 'FR', 'EET EU SFDR Minimum Or Planned Investments With Environmental Or Social Characteristics', 'EET EU SFDR Minimum Or Planned Investments With Environmental Or Social Characteristics'
+
+            insert into ref_esg_fields values ('MS_EET_EU_SFDR_MIN_PLAN_INVEST_ENV_SOC_CHAR_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,20400,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_EU_SFDR_METH_SI_CALC_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET EU SFDR Methodology For Sustainable Investments Calculation', 'EET EU SFDR Methodology For Sustainable Investments Calculation'
+            union
+            select @dic_id, 'FR', 'EET EU SFDR Methodology For Sustainable Investments Calculation', 'EET EU SFDR Methodology For Sustainable Investments Calculation'
+
+            insert into ref_esg_fields values ('MS_EET_EU_SFDR_METH_SI_CALC_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,20410,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_EU_SFDR_MIN_PLAN_INVEST_SI_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET EU SFDR Minimum Or Planned Investments Sustainable Investments', 'EET EU SFDR Minimum Or Planned Investments Sustainable Investments'
+            union
+            select @dic_id, 'FR', 'EET EU SFDR Minimum Or Planned Investments Sustainable Investments', 'EET EU SFDR Minimum Or Planned Investments Sustainable Investments'
+
+            insert into ref_esg_fields values ('MS_EET_EU_SFDR_MIN_PLAN_INVEST_SI_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,20420,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_EU_SFDR_MIN_PLAN_OTHER_INVEST_ENV_SOC_CHAR_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET EU SFDR Minimum Or Planned Other Investments With Environmental Or Social Characteristics', 'EET EU SFDR Minimum Or Planned Other Investments With Environmental Or Social Characteristics'
+            union
+            select @dic_id, 'FR', 'EET EU SFDR Minimum Or Planned Other Investments With Environmental Or Social Characteristics', 'EET EU SFDR Minimum Or Planned Other Investments With Environmental Or Social Characteristics'
+
+            insert into ref_esg_fields values ('MS_EET_EU_SFDR_MIN_PLAN_OTHER_INVEST_ENV_SOC_CHAR_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,20430,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_EU_SFDR_MIN_PLAN_INVEST_SI_OTHER_ENV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET EU SFDR Minimum Or Planned Investments Sustainable Investments Other Environmental', 'EET EU SFDR Minimum Or Planned Investments Sustainable Investments Other Environmental'
+            union
+            select @dic_id, 'FR', 'EET EU SFDR Minimum Or Planned Investments Sustainable Investments Other Environmental', 'EET EU SFDR Minimum Or Planned Investments Sustainable Investments Other Environmental'
+
+            insert into ref_esg_fields values ('MS_EET_EU_SFDR_MIN_PLAN_INVEST_SI_OTHER_ENV_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,20460,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_EU_SFDR_MIN_PLAN_INVEST_SI_SOC_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET EU SFDR Minimum Or Planned Investments Sustainable Investments Social', 'EET EU SFDR Minimum Or Planned Investments Sustainable Investments Social'
+            union
+            select @dic_id, 'FR', 'EET EU SFDR Minimum Or Planned Investments Sustainable Investments Social', 'EET EU SFDR Minimum Or Planned Investments Sustainable Investments Social'
+
+            insert into ref_esg_fields values ('MS_EET_EU_SFDR_MIN_PLAN_INVEST_SI_SOC_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,20470,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_EU_SFDR_LAST_REP_INVEST_ENV_SOC_CHAR_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET EU SFDR Last Reported Investments With Environmental Or Social Characteristics', 'EET EU SFDR Last Reported Investments With Environmental Or Social Characteristics'
+            union
+            select @dic_id, 'FR', 'EET EU SFDR Last Reported Investments With Environmental Or Social Characteristics', 'EET EU SFDR Last Reported Investments With Environmental Or Social Characteristics'
+
+            insert into ref_esg_fields values ('MS_EET_EU_SFDR_LAST_REP_INVEST_ENV_SOC_CHAR_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_EU_SFDR_LAST_REP_INVEST_NOT_SUST_OTHER_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET EU SFDR Last Reported Investments Not Sustainable Other', 'EET EU SFDR Last Reported Investments Not Sustainable Other'
+            union
+            select @dic_id, 'FR', 'EET EU SFDR Last Reported Investments Not Sustainable Other', 'EET EU SFDR Last Reported Investments Not Sustainable Other'
+
+            insert into ref_esg_fields values ('MS_EET_EU_SFDR_LAST_REP_INVEST_NOT_SUST_OTHER_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_EU_SFDR_LAST_REP_INVEST_ARE_SI_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET EU SFDR Last Reported Investments Are Sustainable Investments', 'EET EU SFDR Last Reported Investments Are Sustainable Investments'
+            union
+            select @dic_id, 'FR', 'EET EU SFDR Last Reported Investments Are Sustainable Investments', 'EET EU SFDR Last Reported Investments Are Sustainable Investments'
+
+            insert into ref_esg_fields values ('MS_EET_EU_SFDR_LAST_REP_INVEST_ARE_SI_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_EU_SFDR_LAST_REP_OTHER_INVEST_ENV_SOC_CAR_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET EU SFDR Last Reported Other Investments With Environmental Or Social Characteristics', 'EET EU SFDR Last Reported Other Investments With Environmental Or Social Characteristics'
+            union
+            select @dic_id, 'FR', 'EET EU SFDR Last Reported Other Investments With Environmental Or Social Characteristics', 'EET EU SFDR Last Reported Other Investments With Environmental Or Social Characteristics'
+
+            insert into ref_esg_fields values ('MS_EET_EU_SFDR_LAST_REP_OTHER_INVEST_ENV_SOC_CAR_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_EU_SFDR_LAST_REP_INVEST_ARE_SI_ENV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET EU SFDR Last Reported Investments Are Sustainable Investments Environmental', 'EET EU SFDR Last Reported Investments Are Sustainable Investments Environmental'
+            union
+            select @dic_id, 'FR', 'EET EU SFDR Last Reported Investments Are Sustainable Investments Environmental', 'EET EU SFDR Last Reported Investments Are Sustainable Investments Environmental'
+
+            insert into ref_esg_fields values ('MS_EET_EU_SFDR_LAST_REP_INVEST_ARE_SI_ENV_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_EU_SFDR_LAST_REP_INVEST_ARE_SI_OTHER_ENV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET EU SFDR Last Reported Investments Are Sustainable Investments Other Environmental', 'EET EU SFDR Last Reported Investments Are Sustainable Investments Other Environmental'
+            union
+            select @dic_id, 'FR', 'EET EU SFDR Last Reported Investments Are Sustainable Investments Other Environmental', 'EET EU SFDR Last Reported Investments Are Sustainable Investments Other Environmental'
+
+            insert into ref_esg_fields values ('MS_EET_EU_SFDR_LAST_REP_INVEST_ARE_SI_OTHER_ENV_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_EU_SFDR_LAST_REP_INVEST_ARE_SI_SOC_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET EU SFDR Last Reported Investments Are Sustainable Investments Social', 'EET EU SFDR Last Reported Investments Are Sustainable Investments Social'
+            union
+            select @dic_id, 'FR', 'EET EU SFDR Last Reported Investments Are Sustainable Investments Social', 'EET EU SFDR Last Reported Investments Are Sustainable Investments Social'
+
+            insert into ref_esg_fields values ('MS_EET_EU_SFDR_LAST_REP_INVEST_ARE_SI_SOC_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_CA_EMISS_REDUCTION_OBJ_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Carbon Emissions Reduction Objective', 'EET Carbon Emissions Reduction Objective'
+            union
+            select @dic_id, 'FR', 'EET Carbon Emissions Reduction Objective', 'EET Carbon Emissions Reduction Objective'
+
+            insert into ref_esg_fields values ('MS_EET_CA_EMISS_REDUCTION_OBJ_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,20570,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_PARIS_AGREEMENT_ALIGNMENT_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Paris Agreement Alignment', 'EET Paris Agreement Alignment'
+            union
+            select @dic_id, 'FR', 'EET Paris Agreement Alignment', 'EET Paris Agreement Alignment'
+
+            insert into ref_esg_fields values ('MS_EET_PARIS_AGREEMENT_ALIGNMENT_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,20580,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_CON_WPN_EXC_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Conventional Weapons Exclusion', 'EET Conventional Weapons Exclusion'
+            union
+            select @dic_id, 'FR', 'EET Conventional Weapons Exclusion', 'EET Conventional Weapons Exclusion'
+
+            insert into ref_esg_fields values ('MS_EET_CON_WPN_EXC_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_CON_WPN_EXC_THRESHOLD_TYPE_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Conventional Weapons Exclusion Threshold Type', 'EET Conventional Weapons Exclusion Threshold Type'
+            union
+            select @dic_id, 'FR', 'EET Conventional Weapons Exclusion Threshold Type', 'EET Conventional Weapons Exclusion Threshold Type'
+
+            insert into ref_esg_fields values ('MS_EET_CON_WPN_EXC_THRESHOLD_TYPE_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_CON_WPN_EXC_REL_TYPE_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Conventional Weapons Exclusion Relative Threshold', 'EET Conventional Weapons Exclusion Relative Threshold'
+            union
+            select @dic_id, 'FR', 'EET Conventional Weapons Exclusion Relative Threshold', 'EET Conventional Weapons Exclusion Relative Threshold'
+
+            insert into ref_esg_fields values ('MS_EET_CON_WPN_EXC_REL_TYPE_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_CON_WPN_EXC_PART_VAL_CHAIN_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Conventional Weapons Exclusion Part of Value Chain', 'EET Conventional Weapons Exclusion Part of Value Chain'
+            union
+            select @dic_id, 'FR', 'EET Conventional Weapons Exclusion Part of Value Chain', 'EET Conventional Weapons Exclusion Part of Value Chain'
+
+            insert into ref_esg_fields values ('MS_EET_CON_WPN_EXC_PART_VAL_CHAIN_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_NUCLEAR_WPN_EXC_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Nuclear Weapons Exclusion', 'EET Nuclear Weapons Exclusion'
+            union
+            select @dic_id, 'FR', 'EET Nuclear Weapons Exclusion', 'EET Nuclear Weapons Exclusion'
+
+            insert into ref_esg_fields values ('MS_EET_NUCLEAR_WPN_EXC_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_NUCLEAR_WPN_EXC_THRESHOLD_TYPE_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Nuclear Weapons Exclusion Threshold Type', 'EET Nuclear Weapons Exclusion Threshold Type'
+            union
+            select @dic_id, 'FR', 'EET Nuclear Weapons Exclusion Threshold Type', 'EET Nuclear Weapons Exclusion Threshold Type'
+
+            insert into ref_esg_fields values ('MS_EET_NUCLEAR_WPN_EXC_THRESHOLD_TYPE_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_NUCLEAR_WPN_EXC_REL_THRESHOLD_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Nuclear Weapons Exclusion Relative Threshold', 'EET Nuclear Weapons Exclusion Relative Threshold'
+            union
+            select @dic_id, 'FR', 'EET Nuclear Weapons Exclusion Relative Threshold', 'EET Nuclear Weapons Exclusion Relative Threshold'
+
+            insert into ref_esg_fields values ('MS_EET_NUCLEAR_WPN_EXC_REL_THRESHOLD_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_NUCLEAR_WPN_EXC_PART_VAL_CHAIN_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Nuclear Weapons Exclusion Part of Value Chain', 'EET Nuclear Weapons Exclusion Part of Value Chain'
+            union
+            select @dic_id, 'FR', 'EET Nuclear Weapons Exclusion Part of Value Chain', 'EET Nuclear Weapons Exclusion Part of Value Chain'
+
+            insert into ref_esg_fields values ('MS_EET_NUCLEAR_WPN_EXC_PART_VAL_CHAIN_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_UNCON_WPN_EXC_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Unconventional Weapons Exclusion', 'EET Unconventional Weapons Exclusion'
+            union
+            select @dic_id, 'FR', 'EET Unconventional Weapons Exclusion', 'EET Unconventional Weapons Exclusion'
+
+            insert into ref_esg_fields values ('MS_EET_UNCON_WPN_EXC_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_UNCON_WPN_EXC_REL_THRESHOLD_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Unconventional Weapons Exclusion Relative Threshold', 'EET Unconventional Weapons Exclusion Relative Threshold'
+            union
+            select @dic_id, 'FR', 'EET Unconventional Weapons Exclusion Relative Threshold', 'EET Unconventional Weapons Exclusion Relative Threshold'
+
+            insert into ref_esg_fields values ('MS_EET_UNCON_WPN_EXC_REL_THRESHOLD_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_NUC_WPN_EXC_SOV_HOLDINGS_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Nuclear Weapons Exclusion Sovereign Holdings', 'EET Nuclear Weapons Exclusion Sovereign Holdings'
+            union
+            select @dic_id, 'FR', 'EET Nuclear Weapons Exclusion Sovereign Holdings', 'EET Nuclear Weapons Exclusion Sovereign Holdings'
+
+            insert into ref_esg_fields values ('MS_EET_NUC_WPN_EXC_SOV_HOLDINGS_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_NON_PEROLIF_TREATY_NUC_WPN_SOV_HOLDINGS_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Non-Proliferation Treaty of Nuclear Weapons Sovereign Holdings', 'EET Non-Proliferation Treaty of Nuclear Weapons Sovereign Holdings'
+            union
+            select @dic_id, 'FR', 'EET Non-Proliferation Treaty of Nuclear Weapons Sovereign Holdings', 'EET Non-Proliferation Treaty of Nuclear Weapons Sovereign Holdings'
+
+            insert into ref_esg_fields values ('MS_EET_NON_PEROLIF_TREATY_NUC_WPN_SOV_HOLDINGS_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_AMF_DOCTRINE_APPROACH_NUM') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET AMF Doctrine Approach', 'EET AMF Doctrine Approach'
+            union
+            select @dic_id, 'FR', 'EET AMF Doctrine Approach', 'EET AMF Doctrine Approach'
+
+            insert into ref_esg_fields values ('MS_EET_AMF_DOCTRINE_APPROACH_NUM','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','int',null,60400,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_GREEN_GAS_EMISS_SCOPE_1_CON_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Greenhouse Gas Emissions Scope 1 Considered', 'EET Greenhouse Gas Emissions Scope 1 Considered'
+            union
+            select @dic_id, 'FR', 'EET Greenhouse Gas Emissions Scope 1 Considered', 'EET Greenhouse Gas Emissions Scope 1 Considered'
+
+            insert into ref_esg_fields values ('MS_EET_GREEN_GAS_EMISS_SCOPE_1_CON_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_GREEN_GAS_EMISS_SCOPE_1_ELIG_ASSETS_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Greenhouse Gas Emissions Scope 1 Eligible Assets', 'EET Greenhouse Gas Emissions Scope 1 Eligible Assets'
+            union
+            select @dic_id, 'FR', 'EET Greenhouse Gas Emissions Scope 1 Eligible Assets', 'EET Greenhouse Gas Emissions Scope 1 Eligible Assets'
+
+            insert into ref_esg_fields values ('MS_EET_GREEN_GAS_EMISS_SCOPE_1_ELIG_ASSETS_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_GREEN_GAS_EMISS_SCOPE_2_VAL') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Greenhouse Gas Emissions Scope 2 Value', 'EET Greenhouse Gas Emissions Scope 2 Value'
+            union
+            select @dic_id, 'FR', 'EET Greenhouse Gas Emissions Scope 2 Value', 'EET Greenhouse Gas Emissions Scope 2 Value'
+
+            insert into ref_esg_fields values ('MS_EET_GREEN_GAS_EMISS_SCOPE_2_VAL','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_GREEN_GAS_EMISS_SCOPE_2_CON_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Greenhouse Gas Emissions Scope 2 Considered', 'EET Greenhouse Gas Emissions Scope 2 Considered'
+            union
+            select @dic_id, 'FR', 'EET Greenhouse Gas Emissions Scope 2 Considered', 'EET Greenhouse Gas Emissions Scope 2 Considered'
+
+            insert into ref_esg_fields values ('MS_EET_GREEN_GAS_EMISS_SCOPE_2_CON_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_GREEN_GAS_EMISS_SCOPE_2_COV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Greenhouse Gas Emissions Scope 2 Coverage', 'EET Greenhouse Gas Emissions Scope 2 Coverage'
+            union
+            select @dic_id, 'FR', 'EET Greenhouse Gas Emissions Scope 2 Coverage', 'EET Greenhouse Gas Emissions Scope 2 Coverage'
+
+            insert into ref_esg_fields values ('MS_EET_GREEN_GAS_EMISS_SCOPE_2_COV_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_GREEN_GAS_EMISS_SCOPE_2_ELIG_ASSETS_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Greenhouse Gas Emissions Scope 2 Eligible Assets', 'EET Greenhouse Gas Emissions Scope 2 Eligible Assets'
+            union
+            select @dic_id, 'FR', 'EET Greenhouse Gas Emissions Scope 2 Eligible Assets', 'EET Greenhouse Gas Emissions Scope 2 Eligible Assets'
+
+            insert into ref_esg_fields values ('MS_EET_GREEN_GAS_EMISS_SCOPE_2_ELIG_ASSETS_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_GREEN_GAS_EMISS_SCOPE_3_VAL') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Greenhouse Gas Emissions Scope 3 Value', 'EET Greenhouse Gas Emissions Scope 3 Value'
+            union
+            select @dic_id, 'FR', 'EET Greenhouse Gas Emissions Scope 3 Value', 'EET Greenhouse Gas Emissions Scope 3 Value'
+
+            insert into ref_esg_fields values ('MS_EET_GREEN_GAS_EMISS_SCOPE_3_VAL','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_GREEN_GAS_EMISS_SCOPE_3_CON_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Greenhouse Gas Emissions Scope 3 Considered', 'EET Greenhouse Gas Emissions Scope 3 Considered'
+            union
+            select @dic_id, 'FR', 'EET Greenhouse Gas Emissions Scope 3 Considered', 'EET Greenhouse Gas Emissions Scope 3 Considered'
+
+            insert into ref_esg_fields values ('MS_EET_GREEN_GAS_EMISS_SCOPE_3_CON_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_GREEN_GAS_EMISS_SCOPE_3_COV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Greenhouse Gas Emissions Scope 3 Coverage', 'EET Greenhouse Gas Emissions Scope 3 Coverage'
+            union
+            select @dic_id, 'FR', 'EET Greenhouse Gas Emissions Scope 3 Coverage', 'EET Greenhouse Gas Emissions Scope 3 Coverage'
+
+            insert into ref_esg_fields values ('MS_EET_GREEN_GAS_EMISS_SCOPE_3_COV_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_GREEN_GAS_EMISS_SCOPE_3_ELIG_ASSETS_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Greenhouse Gas Emissions Scope 3 Eligible Assets', 'EET Greenhouse Gas Emissions Scope 3 Eligible Assets'
+            union
+            select @dic_id, 'FR', 'EET Greenhouse Gas Emissions Scope 3 Eligible Assets', 'EET Greenhouse Gas Emissions Scope 3 Eligible Assets'
+
+            insert into ref_esg_fields values ('MS_EET_GREEN_GAS_EMISS_SCOPE_3_ELIG_ASSETS_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_GREEN_GAS_EMISS_TOTAL_SCOPE_1_2_CON_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Greenhouse Gas Emissions Total Scope 1 And 2 Considered', 'EET Greenhouse Gas Emissions Total Scope 1 And 2 Considered'
+            union
+            select @dic_id, 'FR', 'EET Greenhouse Gas Emissions Total Scope 1 And 2 Considered', 'EET Greenhouse Gas Emissions Total Scope 1 And 2 Considered'
+
+            insert into ref_esg_fields values ('MS_EET_GREEN_GAS_EMISS_TOTAL_SCOPE_1_2_CON_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_GREEN_GAS_EMISS_TOTAL_SCOPE_1_2_ELIG_ASSETS_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Greenhouse Gas Emissions Total Scope 1 And 2 Eligible Assets', 'EET Greenhouse Gas Emissions Total Scope 1 And 2 Eligible Assets'
+            union
+            select @dic_id, 'FR', 'EET Greenhouse Gas Emissions Total Scope 1 And 2 Eligible Assets', 'EET Greenhouse Gas Emissions Total Scope 1 And 2 Eligible Assets'
+
+            insert into ref_esg_fields values ('MS_EET_GREEN_GAS_EMISS_TOTAL_SCOPE_1_2_ELIG_ASSETS_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_GREEN_GAS_EMISS_TOTAL_SCOPE_1_2_3_CON_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Greenhouse Gas Emissions Total Scope 1 And 2 And 3 Considered', 'EET Greenhouse Gas Emissions Total Scope 1 And 2 And 3 Considered'
+            union
+            select @dic_id, 'FR', 'EET Greenhouse Gas Emissions Total Scope 1 And 2 And 3 Considered', 'EET Greenhouse Gas Emissions Total Scope 1 And 2 And 3 Considered'
+
+            insert into ref_esg_fields values ('MS_EET_GREEN_GAS_EMISS_TOTAL_SCOPE_1_2_3_CON_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_GREEN_GAS_EMISS_TOTAL_SCOPE_1_2_3_COV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Greenhouse Gas Emissions Total Scope 1 And 2 And 3 Coverage', 'EET Greenhouse Gas Emissions Total Scope 1 And 2 And 3 Coverage'
+            union
+            select @dic_id, 'FR', 'EET Greenhouse Gas Emissions Total Scope 1 And 2 And 3 Coverage', 'EET Greenhouse Gas Emissions Total Scope 1 And 2 And 3 Coverage'
+
+            insert into ref_esg_fields values ('MS_EET_GREEN_GAS_EMISS_TOTAL_SCOPE_1_2_3_COV_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_GREEN_GAS_EMISS_TOTAL_SCOPE_1_2_3_ELIG_ASSETS_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Greenhouse Gas Emissions Total Scope 1 And 2 And 3 Eligible Assets', 'EET Greenhouse Gas Emissions Total Scope 1 And 2 And 3 Eligible Assets'
+            union
+            select @dic_id, 'FR', 'EET Greenhouse Gas Emissions Total Scope 1 And 2 And 3 Eligible Assets', 'EET Greenhouse Gas Emissions Total Scope 1 And 2 And 3 Eligible Assets'
+
+            insert into ref_esg_fields values ('MS_EET_GREEN_GAS_EMISS_TOTAL_SCOPE_1_2_3_ELIG_ASSETS_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_CA_FOOT_SCOPE_1_2_VAL') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Carbon Footprint Scope 1 And 2 Value', 'EET Carbon Footprint Scope 1 And 2 Value'
+            union
+            select @dic_id, 'FR', 'EET Carbon Footprint Scope 1 And 2 Value', 'EET Carbon Footprint Scope 1 And 2 Value'
+
+            insert into ref_esg_fields values ('MS_EET_CA_FOOT_SCOPE_1_2_VAL','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_CA_FOOT_SCOPE_1_2_CON_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Carbon Footprint Scope 1 And 2 Considered', 'EET Carbon Footprint Scope 1 And 2 Considered'
+            union
+            select @dic_id, 'FR', 'EET Carbon Footprint Scope 1 And 2 Considered', 'EET Carbon Footprint Scope 1 And 2 Considered'
+
+            insert into ref_esg_fields values ('MS_EET_CA_FOOT_SCOPE_1_2_CON_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_CA_FOOT_SCOPE_1_2_COV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Carbon Footprint Scope 1 And 2 Coverage', 'EET Carbon Footprint Scope 1 And 2 Coverage'
+            union
+            select @dic_id, 'FR', 'EET Carbon Footprint Scope 1 And 2 Coverage', 'EET Carbon Footprint Scope 1 And 2 Coverage'
+
+            insert into ref_esg_fields values ('MS_EET_CA_FOOT_SCOPE_1_2_COV_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_CA_FOOT_SCOPE_1_2_ELIG_ASSETS_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Carbon Footprint Scope 1 And 2 Eligible Assets', 'EET Carbon Footprint Scope 1 And 2 Eligible Assets'
+            union
+            select @dic_id, 'FR', 'EET Carbon Footprint Scope 1 And 2 Eligible Assets', 'EET Carbon Footprint Scope 1 And 2 Eligible Assets'
+
+            insert into ref_esg_fields values ('MS_EET_CA_FOOT_SCOPE_1_2_ELIG_ASSETS_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_CA_FOOT_SCOPE_1_2_3_VAL') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Carbon Footprint Scope 1 And 2 And 3 Value', 'EET Carbon Footprint Scope 1 And 2 And 3 Value'
+            union
+            select @dic_id, 'FR', 'EET Carbon Footprint Scope 1 And 2 And 3 Value', 'EET Carbon Footprint Scope 1 And 2 And 3 Value'
+
+            insert into ref_esg_fields values ('MS_EET_CA_FOOT_SCOPE_1_2_3_VAL','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_CA_FOOT_SCOPE_1_2_3_CON_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Carbon Footprint Scope 1 And 2 And 3 Considered', 'EET Carbon Footprint Scope 1 And 2 And 3 Considered'
+            union
+            select @dic_id, 'FR', 'EET Carbon Footprint Scope 1 And 2 And 3 Considered', 'EET Carbon Footprint Scope 1 And 2 And 3 Considered'
+
+            insert into ref_esg_fields values ('MS_EET_CA_FOOT_SCOPE_1_2_3_CON_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_CA_FOOT_SCOPE_1_2_3_ELIG_ASSETS_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Carbon Footprint Scope 1 And 2 And 3 Eligible Assets', 'EET Carbon Footprint Scope 1 And 2 And 3 Eligible Assets'
+            union
+            select @dic_id, 'FR', 'EET Carbon Footprint Scope 1 And 2 And 3 Eligible Assets', 'EET Carbon Footprint Scope 1 And 2 And 3 Eligible Assets'
+
+            insert into ref_esg_fields values ('MS_EET_CA_FOOT_SCOPE_1_2_3_ELIG_ASSETS_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_GREEN_GAS_INTENS_SCOPE_1_2_CON_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Greenhouse Gas Intensity Scope 1 And 2 Considered', 'EET Greenhouse Gas Intensity Scope 1 And 2 Considered'
+            union
+            select @dic_id, 'FR', 'EET Greenhouse Gas Intensity Scope 1 And 2 Considered', 'EET Greenhouse Gas Intensity Scope 1 And 2 Considered'
+
+            insert into ref_esg_fields values ('MS_EET_GREEN_GAS_INTENS_SCOPE_1_2_CON_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_GREEN_GAS_INTENS_SCOPE_1_2_ELIG_ASSETS_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Greenhouse Gas Intensity Scope 1 And 2 Eligible Assets', 'EET Greenhouse Gas Intensity Scope 1 And 2 Eligible Assets'
+            union
+            select @dic_id, 'FR', 'EET Greenhouse Gas Intensity Scope 1 And 2 Eligible Assets', 'EET Greenhouse Gas Intensity Scope 1 And 2 Eligible Assets'
+
+            insert into ref_esg_fields values ('MS_EET_GREEN_GAS_INTENS_SCOPE_1_2_ELIG_ASSETS_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_GREEN_GAS_INTENS_SCOPE_1_2_3_VAL') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Greenhouse Gas Intensity Scope 1 And 2 And 3 Value', 'EET Greenhouse Gas Intensity Scope 1 And 2 And 3 Value'
+            union
+            select @dic_id, 'FR', 'EET Greenhouse Gas Intensity Scope 1 And 2 And 3 Value', 'EET Greenhouse Gas Intensity Scope 1 And 2 And 3 Value'
+
+            insert into ref_esg_fields values ('MS_EET_GREEN_GAS_INTENS_SCOPE_1_2_3_VAL','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_GREEN_GAS_INTENS_SCOPE_1_2_3_CON_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Greenhouse Gas Intensity Scope 1 And 2 And 3 Considered', 'EET Greenhouse Gas Intensity Scope 1 And 2 And 3 Considered'
+            union
+            select @dic_id, 'FR', 'EET Greenhouse Gas Intensity Scope 1 And 2 And 3 Considered', 'EET Greenhouse Gas Intensity Scope 1 And 2 And 3 Considered'
+
+            insert into ref_esg_fields values ('MS_EET_GREEN_GAS_INTENS_SCOPE_1_2_3_CON_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_GREEN_GAS_INTENS_SCOPE_1_2_3_COV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Greenhouse Gas Intensity Scope 1 And 2 And 3 Coverage', 'EET Greenhouse Gas Intensity Scope 1 And 2 And 3 Coverage'
+            union
+            select @dic_id, 'FR', 'EET Greenhouse Gas Intensity Scope 1 And 2 And 3 Coverage', 'EET Greenhouse Gas Intensity Scope 1 And 2 And 3 Coverage'
+
+            insert into ref_esg_fields values ('MS_EET_GREEN_GAS_INTENS_SCOPE_1_2_3_COV_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_GREEN_GAS_INTENS_SCOPE_1_2_3_ELIG_ASSETS_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Greenhouse Gas Intensity Scope 1 And 2 And 3 Eligible Assets', 'EET Greenhouse Gas Intensity Scope 1 And 2 And 3 Eligible Assets'
+            union
+            select @dic_id, 'FR', 'EET Greenhouse Gas Intensity Scope 1 And 2 And 3 Eligible Assets', 'EET Greenhouse Gas Intensity Scope 1 And 2 And 3 Eligible Assets'
+
+            insert into ref_esg_fields values ('MS_EET_GREEN_GAS_INTENS_SCOPE_1_2_3_ELIG_ASSETS_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_UNGC_PRINC_OECD_LACK_COMP_MECH_VAL') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET UNGC Principles Or OECD Lack of Compliance Mechanisms Value', 'EET UNGC Principles Or OECD Lack of Compliance Mechanisms Value'
+            union
+            select @dic_id, 'FR', 'EET UNGC Principles Or OECD Lack of Compliance Mechanisms Value', 'EET UNGC Principles Or OECD Lack of Compliance Mechanisms Value'
+
+            insert into ref_esg_fields values ('MS_EET_UNGC_PRINC_OECD_LACK_COMP_MECH_VAL','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_UNGC_PRINC_OECD_LACK_COMP_MECH_CON_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET UNGC Principles Or OECD Lack of Compliance Mechanisms Considered', 'EET UNGC Principles Or OECD Lack of Compliance Mechanisms Considered'
+            union
+            select @dic_id, 'FR', 'EET UNGC Principles Or OECD Lack of Compliance Mechanisms Considered', 'EET UNGC Principles Or OECD Lack of Compliance Mechanisms Considered'
+
+            insert into ref_esg_fields values ('MS_EET_UNGC_PRINC_OECD_LACK_COMP_MECH_CON_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_UNGC_PRINC_OECD_LACK_COMP_MECH_COV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET UNGC Principles Or OECD Lack of Compliance Mechanisms Coverage', 'EET UNGC Principles Or OECD Lack of Compliance Mechanisms Coverage'
+            union
+            select @dic_id, 'FR', 'EET UNGC Principles Or OECD Lack of Compliance Mechanisms Coverage', 'EET UNGC Principles Or OECD Lack of Compliance Mechanisms Coverage'
+
+            insert into ref_esg_fields values ('MS_EET_UNGC_PRINC_OECD_LACK_COMP_MECH_COV_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_UNGC_PRINC_OECD_LACK_COMP_MECH_ELIG_ASSETS_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET UNGC Principles Or OECD Lack of Compliance Mechanisms Eligible Assets', 'EET UNGC Principles Or OECD Lack of Compliance Mechanisms Eligible Assets'
+            union
+            select @dic_id, 'FR', 'EET UNGC Principles Or OECD Lack of Compliance Mechanisms Eligible Assets', 'EET UNGC Principles Or OECD Lack of Compliance Mechanisms Eligible Assets'
+
+            insert into ref_esg_fields values ('MS_EET_UNGC_PRINC_OECD_LACK_COMP_MECH_ELIG_ASSETS_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_CON_WPN_VAL') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Controversial Weapons Value', 'EET Controversial Weapons Value'
+            union
+            select @dic_id, 'FR', 'EET Controversial Weapons Value', 'EET Controversial Weapons Value'
+
+            insert into ref_esg_fields values ('MS_EET_CON_WPN_VAL','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_CON_WPN_CON_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Controversial Weapons Considered', 'EET Controversial Weapons Considered'
+            union
+            select @dic_id, 'FR', 'EET Controversial Weapons Considered', 'EET Controversial Weapons Considered'
+
+            insert into ref_esg_fields values ('MS_EET_CON_WPN_CON_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_CON_WPN_COV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Controversial Weapons Coverage', 'EET Controversial Weapons Coverage'
+            union
+            select @dic_id, 'FR', 'EET Controversial Weapons Coverage', 'EET Controversial Weapons Coverage'
+
+            insert into ref_esg_fields values ('MS_EET_CON_WPN_COV_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_CON_WPN_ELIG_ASSETS_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Controversial Weapons Eligible Assets', 'EET Controversial Weapons Eligible Assets'
+            union
+            select @dic_id, 'FR', 'EET Controversial Weapons Eligible Assets', 'EET Controversial Weapons Eligible Assets'
+
+            insert into ref_esg_fields values ('MS_EET_CON_WPN_ELIG_ASSETS_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_EU_SFDR_MIN_PLAN_INVEST_SI_TAX_ALIGN_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET EU SFDR Minimum Or Planned Investments Sustainable Investments Taxonomy Aligned', 'EET EU SFDR Minimum Or Planned Investments Sustainable Investments Taxonomy Aligned'
+            union
+            select @dic_id, 'FR', 'EET EU SFDR Minimum Or Planned Investments Sustainable Investments Taxonomy Aligned', 'EET EU SFDR Minimum Or Planned Investments Sustainable Investments Taxonomy Aligned'
+
+            insert into ref_esg_fields values ('MS_EET_EU_SFDR_MIN_PLAN_INVEST_SI_TAX_ALIGN_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,20450,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_EU_SFDR_LAST_REP_INVEST_ARE_SI_TAX_ALIGN_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET EU SFDR Last Reported Investments Are Sustainable Investments Taxonomy Aligned', 'EET EU SFDR Last Reported Investments Are Sustainable Investments Taxonomy Aligned'
+            union
+            select @dic_id, 'FR', 'EET EU SFDR Last Reported Investments Are Sustainable Investments Taxonomy Aligned', 'EET EU SFDR Last Reported Investments Are Sustainable Investments Taxonomy Aligned'
+
+            insert into ref_esg_fields values ('MS_EET_EU_SFDR_LAST_REP_INVEST_ARE_SI_TAX_ALIGN_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_MIN_INVEST_ALIGN_EU_TAX_INC_SOV_BONDS_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Minimum Percentage Investments Aligned EU Taxonomy Including Sovereign Bonds', 'EET Minimum Percentage Investments Aligned EU Taxonomy Including Sovereign Bonds'
+            union
+            select @dic_id, 'FR', 'EET Minimum Percentage Investments Aligned EU Taxonomy Including Sovereign Bonds', 'EET Minimum Percentage Investments Aligned EU Taxonomy Including Sovereign Bonds'
+
+            insert into ref_esg_fields values ('MS_EET_MIN_INVEST_ALIGN_EU_TAX_INC_SOV_BONDS_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,20600,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_MIN_INVEST_ALIGN_EU_TAX_EXC_SOV_BONDS_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Minimum Percentage Investments Aligned EU Taxonomy Excluding Sovereign Bonds', 'EET Minimum Percentage Investments Aligned EU Taxonomy Excluding Sovereign Bonds'
+            union
+            select @dic_id, 'FR', 'EET Minimum Percentage Investments Aligned EU Taxonomy Excluding Sovereign Bonds', 'EET Minimum Percentage Investments Aligned EU Taxonomy Excluding Sovereign Bonds'
+
+            insert into ref_esg_fields values ('MS_EET_MIN_INVEST_ALIGN_EU_TAX_EXC_SOV_BONDS_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,20610,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_THIRD_PARTY_REVIEW_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Third Party Review', 'EET Third Party Review'
+            union
+            select @dic_id, 'FR', 'EET Third Party Review', 'EET Third Party Review'
+
+            insert into ref_esg_fields values ('MS_EET_THIRD_PARTY_REVIEW_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,20620,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_EU_TAX_ALIGN_METH_USED_TEXT') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET EU Taxonomy Alignment Methodology Used', 'EET EU Taxonomy Alignment Methodology Used'
+            union
+            select @dic_id, 'FR', 'EET EU Taxonomy Alignment Methodology Used', 'EET EU Taxonomy Alignment Methodology Used'
+
+            insert into ref_esg_fields values ('MS_EET_EU_TAX_ALIGN_METH_USED_TEXT','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','varchar(5000)',null,20630,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_MIN_SHARE_TRANS_ACTIV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Minimum Share of Transitional Activities', 'EET Minimum Share of Transitional Activities'
+            union
+            select @dic_id, 'FR', 'EET Minimum Share of Transitional Activities', 'EET Minimum Share of Transitional Activities'
+
+            insert into ref_esg_fields values ('MS_EET_MIN_SHARE_TRANS_ACTIV_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,20640,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_MIN_SHARE_ENABL_ACTIV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Minimum Share of Enabling Activities', 'EET Minimum Share of Enabling Activities'
+            union
+            select @dic_id, 'FR', 'EET Minimum Share of Enabling Activities', 'EET Minimum Share of Enabling Activities'
+
+            insert into ref_esg_fields values ('MS_EET_MIN_SHARE_ENABL_ACTIV_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,20650,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_TAX_ALIGN_INC_SOV_REV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Percentage of Taxonomy Aligned Include Sovereign Revenue', 'EET Percentage of Taxonomy Aligned Include Sovereign Revenue'
+            union
+            select @dic_id, 'FR', 'EET Percentage of Taxonomy Aligned Include Sovereign Revenue', 'EET Percentage of Taxonomy Aligned Include Sovereign Revenue'
+
+            insert into ref_esg_fields values ('MS_EET_TAX_ALIGN_INC_SOV_REV_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_TAX_ALIGN_INC_SOV_CAPEX_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Percentage of Taxonomy Aligned Include Sovereign Capital Expenditure', 'EET Percentage of Taxonomy Aligned Include Sovereign Capital Expenditure'
+            union
+            select @dic_id, 'FR', 'EET Percentage of Taxonomy Aligned Include Sovereign Capital Expenditure', 'EET Percentage of Taxonomy Aligned Include Sovereign Capital Expenditure'
+
+            insert into ref_esg_fields values ('MS_EET_TAX_ALIGN_INC_SOV_CAPEX_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_TAX_ALIGN_INC_SOV_OPEX_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Percentage of Taxonomy Aligned Include Sovereign Operational Expenditure', 'EET Percentage of Taxonomy Aligned Include Sovereign Operational Expenditure'
+            union
+            select @dic_id, 'FR', 'EET Percentage of Taxonomy Aligned Include Sovereign Operational Expenditure', 'EET Percentage of Taxonomy Aligned Include Sovereign Operational Expenditure'
+
+            insert into ref_esg_fields values ('MS_EET_TAX_ALIGN_INC_SOV_OPEX_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_TAX_ALIGN_EXC_SOV_REV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Percentage of Taxonomy Aligned Exclude Sovereign Revenue', 'EET Percentage of Taxonomy Aligned Exclude Sovereign Revenue'
+            union
+            select @dic_id, 'FR', 'EET Percentage of Taxonomy Aligned Exclude Sovereign Revenue', 'EET Percentage of Taxonomy Aligned Exclude Sovereign Revenue'
+
+            insert into ref_esg_fields values ('MS_EET_TAX_ALIGN_EXC_SOV_REV_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_TAX_ALIGN_EXC_SOV_CAPEX_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Percentage of Taxonomy Aligned Exclude Sovereign Capital Expenditure', 'EET Percentage of Taxonomy Aligned Exclude Sovereign Capital Expenditure'
+            union
+            select @dic_id, 'FR', 'EET Percentage of Taxonomy Aligned Exclude Sovereign Capital Expenditure', 'EET Percentage of Taxonomy Aligned Exclude Sovereign Capital Expenditure'
+
+            insert into ref_esg_fields values ('MS_EET_TAX_ALIGN_EXC_SOV_CAPEX_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_TAX_ALIGN_EXC_SOV_OPEX_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Percentage of Taxonomy Aligned Exclude Sovereign Operational Expenditure', 'EET Percentage of Taxonomy Aligned Exclude Sovereign Operational Expenditure'
+            union
+            select @dic_id, 'FR', 'EET Percentage of Taxonomy Aligned Exclude Sovereign Operational Expenditure', 'EET Percentage of Taxonomy Aligned Exclude Sovereign Operational Expenditure'
+
+            insert into ref_esg_fields values ('MS_EET_TAX_ALIGN_EXC_SOV_OPEX_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_ACTUAL_SHARE_TRANS_ACTIV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Actual Share of Transitional Activities', 'EET Actual Share of Transitional Activities'
+            union
+            select @dic_id, 'FR', 'EET Actual Share of Transitional Activities', 'EET Actual Share of Transitional Activities'
+
+            insert into ref_esg_fields values ('MS_EET_ACTUAL_SHARE_TRANS_ACTIV_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
+if not exists (select 1 from reg_esg_fields where field_name = 'MS_EET_ACTUAL_SHARE_ENABL_ACTIV_PER') 
+        begin
+            exec ps_id_tables 'dic', null, 1, @dic_id Output
+            insert into dic
+            select @dic_id, 509
+            insert into trdu
+            select @dic_id, 'EN', 'EET Actual Share of Enabling Activities', 'EET Actual Share of Enabling Activities'
+            union
+            select @dic_id, 'FR', 'EET Actual Share of Enabling Activities', 'EET Actual Share of Enabling Activities'
+
+            insert into ref_esg_fields values ('MS_EET_ACTUAL_SHARE_ENABL_ACTIV_PER','MORNING_STAR','EET (European ESG Template)',@dic_id,null,null,'EET (European ESG Template)','float',null,null,null,null,null,null,null,null,null)
+        end
+        
